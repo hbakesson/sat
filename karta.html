@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#e9ede6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1714" media="(prefers-color-scheme: dark)">
+<title>Karta · Hajk på Svartsö</title>
+<meta name="description" content="Schematisk karta över Svartsö med bryggor, grusvägar och blomstigarna.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="pagehead wrap">
+  <a class="back" href="index.html">Hajk på Svartsö</a>
+  <h1>Karta</h1>
+  <p class="ph-meta">Schematisk skiss · inte skalenlig</p>
+</header>
+
+<nav class="navbar" aria-label="Innehåll">
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="karta.html" aria-current="page">Karta</a></li>
+    <li><a href="lordag.html">Lördag</a></li>
+    <li><a href="sondag.html">Söndag</a></li>
+    <li><a href="index.html#mat">Mat &amp; boende</a></li>
+    <li><a href="index.html#bat">Båten</a></li>
+    <li><a href="index.html#packa">Packa</a></li>
+    <li><a href="index.html#regler">Regler</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section class="wrap" id="karta">
+
+  <div class="mapbox">
+    <svg viewBox="0 0 320 232" role="img" aria-label="Schematisk skiss av Svartsö: en liggande åtta av grusvägar mellan fyra ångbåtsbryggor, med Vitsippestigen i väster och Blåklockestigen i öster.">
+      <!-- vatten -->
+      <g fill="var(--sea)" opacity=".16">
+        <ellipse cx="108" cy="86" rx="21" ry="12" transform="rotate(-18 108 86)"/>
+        <ellipse cx="96" cy="118" rx="12" ry="7" transform="rotate(-10 96 118)"/>
+        <path d="M252 104c14-6 26-4 34 3 -9 8-24 11-36 6z"/>
+      </g>
+      <g fill="var(--ink-faint)" font-family="var(--f-body)" font-size="6.4" opacity=".9">
+        <text x="108" y="88" text-anchor="middle">Storträsk</text>
+        <text x="96" y="120" text-anchor="middle">Lillträsk</text>
+      </g>
+
+      <!-- grusvägar -->
+      <g fill="none" stroke="var(--ink-soft)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".75">
+        <path d="M158 26 L158 60"/>
+        <path d="M158 60 L104 60 L82 68"/>
+        <path d="M46 150 L158 150"/>
+        <path d="M158 150 L286 150"/>
+        <path d="M158 150 L158 190"/>
+        <path d="M120 150 L120 196"/>
+        <path d="M158 60 L158 150"/>
+        <path d="M246 150 L246 124 L206 116"/>
+      </g>
+
+      <!-- vitsippestigen (väst) -->
+      <path d="M82 68 C64 84 60 110 54 132 L46 150" fill="none" stroke="var(--sun-graphic)" stroke-width="2.4" stroke-dasharray="1.5 5" stroke-linecap="round"/>
+      <!-- blåklockestigen (öst) -->
+      <path d="M206 116 C198 128 196 136 194 150" fill="none" stroke="var(--bell)" stroke-width="2.4" stroke-dasharray="1.5 5" stroke-linecap="round"/>
+
+      <!-- noder -->
+      <g>
+        <g fill="var(--sea)">
+          <rect x="154" y="22" width="8" height="8" rx="1.5"/>
+          <rect x="116" y="192" width="8" height="8" rx="1.5"/>
+          <rect x="42" y="146" width="8" height="8" rx="1.5"/>
+          <rect x="282" y="146" width="8" height="8" rx="1.5"/>
+        </g>
+        <circle cx="158" cy="150" r="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.6"/>
+        <g fill="var(--sun-graphic)">
+          <circle cx="158" cy="190" r="4"/>
+          <circle cx="76" cy="150" r="4"/>
+          <circle cx="158" cy="41" r="4"/>
+        </g>
+      </g>
+
+      <!-- etiketter -->
+      <g font-family="var(--f-body)" font-size="7.6" fill="var(--ink)">
+        <text x="166" y="20">Svartsö Norra</text>
+        <text x="166" y="45">Skärgårdshotellet</text>
+        <text x="38" y="142">Alsvik</text>
+        <text x="70" y="166">Krogen</text>
+        <text x="128" y="207">Skälvik</text>
+        <text x="238" y="143" text-anchor="end">Söderboudd →</text>
+        <text x="166" y="194">Sågen &amp; skolan</text>
+        <text x="150" y="146" text-anchor="end">4-vägs&#8203;korsningen</text>
+      </g>
+      <g font-family="var(--f-body)" font-size="6.6" font-style="italic">
+        <text x="40" y="106" fill="var(--sun)">Vitsippe&#8203;stigen</text>
+        <text x="212" y="134" fill="var(--bell)">Blåklocke&#8203;stigen</text>
+      </g>
+    </svg>
+    <div class="legend">
+      <span><i class="swatch" style="border-top-color:var(--ink-soft)"></i> Grusväg</span>
+      <span><i class="swatch" style="border-top-color:var(--sun-graphic);border-top-style:dotted;border-top-width:3px"></i> Vitsippestigen</span>
+      <span><i class="swatch" style="border-top-color:var(--bell);border-top-style:dotted;border-top-width:3px"></i> Blåklockestigen</span>
+      <span><i class="swatch" style="border-top-color:var(--sea);border-top-width:6px"></i> Brygga</span>
+    </div>
+  </div>
+  <p class="caption">Schematisk skiss — inte skalenlig. Ta med riktig karta.</p>
+
+  <div class="links">
+    <a href="https://map.stockholmarchipelagotrail.com/#svartso">Interaktiv karta</a>
+    <a href="https://drive.google.com/file/d/1_yBkwuI5-VacIskUWL6wkrq7PRoVuiBB/view">GPX-fil</a>
+    <a href="https://stockholmarchipelagotrail.com/app/uploads/2024/10/en-sat-svartsoe-final.pdf">Karta att skriva ut (PDF)</a>
+  </div>
+</section>
+
+<nav class="pagenav wrap" aria-label="Sidnavigering">
+  
+  <a class="next" href="lordag.html"><span class="dir">Nästa</span><span class="to">Lördag</span></a>
+</nav>
+
+</main>
+
+<footer class="wrap">
+  <p>
+    Uppgifter om leden, avstånd och vägval är hämtade från
+    <a href="https://stockholmarchipelagotrail.com/sv/section/etapp-svartso/">Stockholm Archipelago Trail — Etapp Svartsö</a>
+    och etappens steg-för-steg-beskrivning. Öppettider och båttider kan ha ändrats: kolla innan avfärd.
+    Ön har ca 65 bofasta — var en bra gäst.
+  </p>
+</footer>
+
+</body>
+</html>
