@@ -45,10 +45,10 @@
   </div>
 
   <div class="head" style="margin-top:2.2rem">
-    <h2>Skisserna</h2>
+    <h2>Kartorna</h2>
     <span class="eyebrow">Offline</span>
   </div>
-  <p class="lede">Två skisser, en per dag. Blå linje är dagens sträckning, grått är resten av leden. De ligger i sidan och behöver varken uppkoppling eller batteri på en utskrift. Inte skalenliga — ta med den utskrivna kartan också.</p>
+  <p class="lede">En karta per dag. Cyan linje är dagens sträckning, grått är resten av leden. De är ritade i sidan och kräver ingen uppkoppling. Kustlinjen är stiliserad och avstånden inte skalenliga — ta med den utskrivna kartan också.</p>
 
   <div class="daymaps">
     <figure class="daymap">
@@ -57,51 +57,70 @@
         <span class="dm-title">Hela åttan</span>
         <span class="dm-meta">13,6 km · start och mål Alsvik</span>
       </figcaption>
-    <svg viewBox="0 0 320 210" role="img" aria-label="Lördagens rutt: hela liggande åttan från Alsvik — österut till Blåklockestigen, tillbaka och norrut, sedan västerut över Vitsippestigen till Alsvik.">
-      <g fill="var(--sea)" opacity=".14">
-        <ellipse cx="108" cy="86" rx="21" ry="12" transform="rotate(-18 108 86)"/>
-        <ellipse cx="96" cy="118" rx="12" ry="7" transform="rotate(-10 96 118)"/>
-        <path d="M252 104c14-6 26-4 34 3 -9 8-24 11-36 6z"/>
+    <svg viewBox="0 0 360 232" role="img" aria-label="Illustrerad karta över Svartsö med lördagens rutt: hela liggande åttan från Alsvik, österut till Blåklockestigen, norrut och västerut över Vitsippestigen tillbaka till Alsvik.">
+      <defs>
+        <pattern id="sjoL" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+          <line x1="0" y1="1.5" x2="7" y2="1.5" stroke="var(--sea)" stroke-width=".7" opacity=".45"/>
+        </pattern>
+        <clipPath id="onL"><path d="M34 150 C38 124 62 106 92 98 C120 90 146 72 166 56 C188 68 212 86 242 94 C274 102 304 114 322 134 C332 144 330 152 316 150 C292 164 262 168 234 172 C212 176 192 182 176 194 C164 202 150 208 138 204 C126 200 116 190 100 188 C86 186 76 184 70 178 C58 172 38 164 34 150 Z"/></clipPath>
+      </defs>
+      <rect width="360" height="232" fill="url(#sjoL)"/>
+      <path d="M34 150 C38 124 62 106 92 98 C120 90 146 72 166 56 C188 68 212 86 242 94 C274 102 304 114 322 134 C332 144 330 152 316 150 C292 164 262 168 234 172 C212 176 192 182 176 194 C164 202 150 208 138 204 C126 200 116 190 100 188 C86 186 76 184 70 178 C58 172 38 164 34 150 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round"/>
+      <g stroke="var(--sea)" stroke-width=".9" opacity=".85">
+        <ellipse cx="128" cy="126" rx="27" ry="13" fill="url(#sjoL)" transform="rotate(-14 128 126)"/>
+        <ellipse cx="110" cy="152" rx="13" ry="7" fill="url(#sjoL)" transform="rotate(-8 110 152)"/>
       </g>
-      <g fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M158 26 L158 60"/>
-        <path d="M158 60 L104 60 L82 68"/>
-        <path d="M46 150 L286 150"/>
-        <path d="M158 150 L158 190"/>
-        <path d="M120 150 L120 196"/>
-        <path d="M158 60 L158 150"/>
-        <path d="M246 150 L246 124 L206 116"/>
-        <path d="M82 68 C64 84 60 110 54 132 L46 150" stroke-dasharray="1.5 5"/>
-        <path d="M206 116 C198 128 196 136 194 150" stroke-dasharray="1.5 5"/>
+      <g fill="none" stroke="var(--ink-faint)" stroke-width="1.7" stroke-linecap="round" opacity=".55">
+        <path d="M50 168 C60 173 66 175 74 176 C86 178 92 176 96 174 C112 173 120 172 132 170 C146 167 158 164 168 162 C186 160 198 157 210 157 C228 156 240 155 250 154"/>
+        <path d="M168 162 C168 140 167 118 167 98"/>
+        <path d="M167 98 C167 84 168 70 168 60"/>
+        <path d="M167 98 C146 97 124 100 104 108"/>
+        <path d="M250 154 C252 142 252 134 252 130 C240 126 226 124 216 124"/>
+        <path d="M250 154 C272 152 296 150 316 150"/>
+        <path d="M132 170 C133 182 134 194 134 202"/>
+        <path d="M168 162 C170 174 172 184 174 192"/>
       </g>
-      <g fill="none" stroke="var(--sea)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M46 150 L246 150"/>
-        <path d="M246 150 L246 124 L206 116"/>
-        <path d="M158 150 L158 60"/>
-        <path d="M158 60 L104 60 L82 68"/>
+      <g fill="none" stroke="var(--ink-faint)" stroke-width="1.7" stroke-dasharray="1.5 4.5" stroke-linecap="round" opacity=".55">
+        <path d="M104 108 C88 120 78 138 72 152 C66 162 58 166 50 168"/>
+        <path d="M216 124 C210 136 204 148 198 158"/>
       </g>
-      <path d="M206 116 C198 128 196 136 194 150" fill="none" stroke="var(--bell)" stroke-width="3.4" stroke-dasharray="2 5.5" stroke-linecap="round"/>
-      <path d="M82 68 C64 84 60 110 54 132 L46 150" fill="none" stroke="var(--sun-graphic)" stroke-width="3.4" stroke-dasharray="2 5.5" stroke-linecap="round"/>
-      <path d="M158 150 L158 190" fill="none" stroke="var(--ink-faint)" stroke-width="2.2" stroke-dasharray="3 4"/>
-      <g><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(100 143) rotate(0)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(212 143) rotate(0)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(246 134) rotate(-90)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(196 132) rotate(110)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(165 104) rotate(-90)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(126 53) rotate(180)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(56 116) rotate(100)"/></g>
+      <g fill="none" stroke="var(--sea)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M50 168 C60 173 66 175 74 176 C86 178 92 176 96 174 C112 173 120 172 132 170 C146 167 158 164 168 162 C186 160 198 157 210 157 C228 156 240 155 250 154"/>
+        <path d="M168 162 C168 140 167 118 167 98"/>
+        <path d="M167 98 C146 97 124 100 104 108"/>
+      </g>
+      <path d="M104 108 C88 120 78 138 72 152 C66 162 58 166 50 168" fill="none" stroke="var(--sun-graphic)" stroke-width="3.8" stroke-dasharray="2.5 5.5" stroke-linecap="round"/>
+      <path d="M216 124 C210 136 204 148 198 158" fill="none" stroke="var(--bell)" stroke-width="3.8" stroke-dasharray="2.5 5.5" stroke-linecap="round"/>
+      <path d="M250 154 C252 142 252 134 252 130 C240 126 226 124 216 124" fill="none" stroke="var(--sea)" stroke-width="4" stroke-linecap="round"/>
+      <g><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(112 175) rotate(-8)"/><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(224 157) rotate(-4)"/><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(252 140) rotate(-90)"/><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(206 142) rotate(118)"/><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(168 130) rotate(-90)"/><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(134 99) rotate(182)"/><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(76 140) rotate(108)"/></g>
       <g>
-        <rect x="42" y="145" width="10" height="10" rx="1.5" fill="var(--sea)"/>
-        <circle cx="158" cy="150" r="6.5" fill="var(--paper)" stroke="var(--sea)" stroke-width="3"/>
-        <circle cx="158" cy="60" r="4.6" fill="var(--paper)" stroke="var(--sea)" stroke-width="2.6"/>
-        <circle cx="76" cy="150" r="4.2" fill="var(--color-accent-2)"/>
-        <circle cx="158" cy="190" r="3.6" fill="var(--ink-faint)"/>
+        <rect x="69" y="171" width="10" height="10" rx="1.5" fill="var(--sea)" stroke="var(--paper)" stroke-width="1.4"/>
+        <circle cx="168" cy="162" r="5.4" fill="var(--paper)" stroke="var(--sea)" stroke-width="2.6"/>
+        <circle cx="167" cy="98" r="5.4" fill="var(--paper)" stroke="var(--sea)" stroke-width="2.6"/>
+        <circle cx="104" cy="108" r="4.2" fill="var(--sun-graphic)"/>
+        <circle cx="96" cy="174" r="4" fill="var(--color-accent-2)"/>
+        <rect x="164" y="56" width="8" height="8" rx="1" fill="var(--ink-faint)"/>
+        <rect x="130" y="198" width="8" height="8" rx="1" fill="var(--ink-faint)"/>
+        <rect x="312" y="146" width="8" height="8" rx="1" fill="var(--ink-faint)"/>
       </g>
-      <g font-family="var(--font-body)" font-size="7.6" fill="var(--ink)">
-        <text x="38" y="141">Alsvik</text>
-        <text x="66" y="167">Krogen</text>
-        <text x="150" y="145" text-anchor="end">4-vägskorsningen</text>
-        <text x="166" y="63">3-vägskorsningen</text>
-        <text x="166" y="194">Sågen</text>
-        <text x="286" y="145" text-anchor="end">Söderboudd →</text>
+      <g font-family="var(--font-body)" font-size="8" fill="var(--ink)">
+        <text x="60" y="192" text-anchor="start">Alsvik</text>
+        <text x="96" y="166" text-anchor="middle">Krogen</text>
+        <text x="180" y="160" text-anchor="start">4-vägs&#8203;korsningen</text>
+        <text x="146" y="206" text-anchor="start">Skälvik</text>
+        <text x="176" y="52" text-anchor="start">Svartsö Norra</text>
+        <text x="312" y="142" text-anchor="end">Söderboudd</text>
+        <text x="180" y="196" text-anchor="start">Sågen</text>
+        <text x="128" y="128" text-anchor="middle" fill="var(--ink-faint)" font-style="italic">Storträsk</text>
+        <text x="110" y="154" text-anchor="middle" fill="var(--ink-faint)" font-style="italic">Lillträsk</text>
       </g>
-      <g font-family="var(--font-body)" font-size="6.8" font-style="italic">
-        <text x="14" y="112" fill="var(--sun)">Vitsippestigen</text>
-        <text x="214" y="134" fill="var(--bell)">Blåklockestigen</text>
+      <g font-family="var(--font-body)" font-size="7" font-style="italic">
+        <text x="52" y="132" fill="var(--sun)">Vitsippestigen</text>
+        <text x="212" y="146" fill="var(--bell)">Blåklockestigen</text>
+      </g>
+      <g transform="translate(330 40)">
+        <path d="M0 -13 L4 4 L0 1 L-4 4 Z" fill="var(--ink)"/>
+        <text x="0" y="16" font-family="var(--font-body)" font-size="7.5" font-weight="600" text-anchor="middle" fill="var(--ink)">N</text>
       </g>
     </svg>
       <div class="legend">
@@ -117,42 +136,59 @@
         <span class="dm-title">Skälvik tur och retur</span>
         <span class="dm-meta">5,4 km · förslag</span>
       </figcaption>
-    <svg viewBox="0 0 320 210" role="img" aria-label="Söndagens rutt: från Alsvik österut och söderut till Skälvik brygga, sedan samma väg tillbaka.">
-      <g fill="var(--sea)" opacity=".14">
-        <ellipse cx="108" cy="86" rx="21" ry="12" transform="rotate(-18 108 86)"/>
-        <ellipse cx="96" cy="118" rx="12" ry="7" transform="rotate(-10 96 118)"/>
-        <path d="M252 104c14-6 26-4 34 3 -9 8-24 11-36 6z"/>
+    <svg viewBox="0 0 360 232" role="img" aria-label="Illustrerad karta över Svartsö med söndagens rutt: från Alsvik österut längs grusvägen och söderut till Skälvik brygga, sedan samma väg tillbaka.">
+      <defs>
+        <pattern id="sjoS" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(0)">
+          <line x1="0" y1="1.5" x2="7" y2="1.5" stroke="var(--sea)" stroke-width=".7" opacity=".45"/>
+        </pattern>
+        <clipPath id="onS"><path d="M34 150 C38 124 62 106 92 98 C120 90 146 72 166 56 C188 68 212 86 242 94 C274 102 304 114 322 134 C332 144 330 152 316 150 C292 164 262 168 234 172 C212 176 192 182 176 194 C164 202 150 208 138 204 C126 200 116 190 100 188 C86 186 76 184 70 178 C58 172 38 164 34 150 Z"/></clipPath>
+      </defs>
+      <rect width="360" height="232" fill="url(#sjoS)"/>
+      <path d="M34 150 C38 124 62 106 92 98 C120 90 146 72 166 56 C188 68 212 86 242 94 C274 102 304 114 322 134 C332 144 330 152 316 150 C292 164 262 168 234 172 C212 176 192 182 176 194 C164 202 150 208 138 204 C126 200 116 190 100 188 C86 186 76 184 70 178 C58 172 38 164 34 150 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.6" stroke-linejoin="round"/>
+      <g stroke="var(--sea)" stroke-width=".9" opacity=".85">
+        <ellipse cx="128" cy="126" rx="27" ry="13" fill="url(#sjoS)" transform="rotate(-14 128 126)"/>
+        <ellipse cx="110" cy="152" rx="13" ry="7" fill="url(#sjoS)" transform="rotate(-8 110 152)"/>
       </g>
-      <g fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M158 26 L158 60"/>
-        <path d="M158 60 L104 60 L82 68"/>
-        <path d="M46 150 L286 150"/>
-        <path d="M158 150 L158 190"/>
-        <path d="M120 150 L120 196"/>
-        <path d="M158 60 L158 150"/>
-        <path d="M246 150 L246 124 L206 116"/>
-        <path d="M82 68 C64 84 60 110 54 132 L46 150" stroke-dasharray="1.5 5"/>
-        <path d="M206 116 C198 128 196 136 194 150" stroke-dasharray="1.5 5"/>
+      <g fill="none" stroke="var(--ink-faint)" stroke-width="1.7" stroke-linecap="round" opacity=".55">
+        <path d="M50 168 C60 173 66 175 74 176 C86 178 92 176 96 174 C112 173 120 172 132 170 C146 167 158 164 168 162 C186 160 198 157 210 157 C228 156 240 155 250 154"/>
+        <path d="M168 162 C168 140 167 118 167 98"/>
+        <path d="M167 98 C167 84 168 70 168 60"/>
+        <path d="M167 98 C146 97 124 100 104 108"/>
+        <path d="M250 154 C252 142 252 134 252 130 C240 126 226 124 216 124"/>
+        <path d="M250 154 C272 152 296 150 316 150"/>
+        <path d="M132 170 C133 182 134 194 134 202"/>
+        <path d="M168 162 C170 174 172 184 174 192"/>
       </g>
-      <g fill="none" stroke="var(--sea)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M46 150 L120 150"/>
-        <path d="M120 150 L120 196"/>
+      <g fill="none" stroke="var(--ink-faint)" stroke-width="1.7" stroke-dasharray="1.5 4.5" stroke-linecap="round" opacity=".55">
+        <path d="M104 108 C88 120 78 138 72 152 C66 162 58 166 50 168"/>
+        <path d="M216 124 C210 136 204 148 198 158"/>
       </g>
-      <g><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(84 143) rotate(0)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(127 176) rotate(90)"/></g>
+      <g fill="none" stroke="var(--sea)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M74 176 C86 178 92 176 96 174 C112 173 120 172 132 170"/>
+        <path d="M132 170 C133 182 134 194 134 202"/>
+      </g>
+      <g><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(108 175) rotate(-8)"/><path d="M-4.2 -3.6 L4.6 0 L-4.2 3.6 Z" fill="var(--sea)" transform="translate(133 190) rotate(86)"/></g>
       <g>
-        <rect x="42" y="145" width="10" height="10" rx="1.5" fill="var(--sea)"/>
-        <rect x="115" y="191" width="10" height="10" rx="1.5" fill="var(--color-accent-2)"/>
-        <circle cx="76" cy="150" r="4.2" fill="var(--ink-faint)"/>
-        <circle cx="158" cy="150" r="5" fill="var(--paper)" stroke="var(--ink-faint)" stroke-width="2.4"/>
+        <rect x="69" y="171" width="10" height="10" rx="1.5" fill="var(--sea)" stroke="var(--paper)" stroke-width="1.4"/>
+        <rect x="129" y="197" width="10" height="10" rx="1.5" fill="var(--sea)" stroke="var(--paper)" stroke-width="1.4"/>
+        <circle cx="96" cy="174" r="4" fill="var(--color-accent-2)"/>
+        <rect x="164" y="56" width="8" height="8" rx="1" fill="var(--ink-faint)"/>
+        <rect x="312" y="146" width="8" height="8" rx="1" fill="var(--ink-faint)"/>
       </g>
-      <g font-family="var(--font-body)" font-size="7.6" fill="var(--ink)">
-        <text x="38" y="141">Alsvik</text>
-        <text x="70" y="167">Krogen</text>
-        <text x="132" y="207">Skälvik</text>
-        <text x="166" y="153">4-vägskorsningen</text>
+      <g font-family="var(--font-body)" font-size="8" fill="var(--ink)">
+        <text x="60" y="192" text-anchor="start">Alsvik</text>
+        <text x="96" y="166" text-anchor="middle">Krogen</text>
+        <text x="180" y="160" text-anchor="start">4-vägs&#8203;korsningen</text>
+        <text x="146" y="206" text-anchor="start">Skälvik</text>
+        <text x="176" y="52" text-anchor="start">Svartsö Norra</text>
+        <text x="312" y="142" text-anchor="end">Söderboudd</text>
+        <text x="180" y="196" text-anchor="start">Sågen</text>
+        <text x="128" y="128" text-anchor="middle" fill="var(--ink-faint)" font-style="italic">Storträsk</text>
+        <text x="110" y="154" text-anchor="middle" fill="var(--ink-faint)" font-style="italic">Lillträsk</text>
       </g>
-      <g font-family="var(--font-body)" font-size="6.8" font-style="italic">
-
+      <g transform="translate(330 40)">
+        <path d="M0 -13 L4 4 L0 1 L-4 4 Z" fill="var(--ink)"/>
+        <text x="0" y="16" font-family="var(--font-body)" font-size="7.5" font-weight="600" text-anchor="middle" fill="var(--ink)">N</text>
       </g>
     </svg>
       <div class="legend">
