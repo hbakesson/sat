@@ -259,10 +259,22 @@ section{padding:2.6rem 0 .4rem;scroll-margin-top:3.4rem}
 .pack .hint{display:block;font-size:.74rem;color:var(--ink-faint);text-decoration:none}
 
 /* ---------- regler ---------- */
-.rules{list-style:none;display:flex;flex-direction:column;gap:.55rem}
-.rules li{display:flex;gap:.7rem;font-size:.9rem;color:var(--ink-soft);line-height:1.5}
-.rules li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--sea);margin-top:.52rem}
-.rules b{color:var(--ink);font-weight:600}
+.rules{
+  list-style:none;display:flex;flex-direction:column;gap:1px;
+  background:var(--line);border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden;
+}
+.rules li{background:var(--surface);padding:.8rem .95rem}
+.rules li.now{border-left:3px solid var(--sun-graphic);padding-left:calc(.95rem - 3px)}
+.rules .k{
+  display:block;font-family:var(--f-display);font-weight:600;
+  font-size:1.02rem;letter-spacing:-.01em;line-height:1.25;
+}
+.rules .k .when{
+  font-family:var(--f-mono);font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--sun);margin-left:.5rem;vertical-align:.16em;font-weight:400;
+}
+.rules .v{display:block;font-size:.85rem;color:var(--ink-soft);line-height:1.45;margin-top:.15rem}
 
 footer{margin-top:3rem;padding:1.6rem 0 calc(env(safe-area-inset-bottom) + 2.4rem);border-top:1px solid var(--line-soft)}
 footer p{font-size:.76rem;color:var(--ink-faint);line-height:1.6}
@@ -628,12 +640,30 @@ footer a{color:var(--ink-soft)}
     <span class="eyebrow">Allemansrätten</span>
   </div>
   <ul class="rules">
-    <li>Leden finns bara tack vare <b>markägarnas goda vilja</b>. Gå där leden går, även när en genväg lockar.</li>
-    <li><b>Hundar ska vara kopplade</b> mars–september. Det gäller alltså oss nu.</li>
-    <li>Allt skräp följer med hem — <b>soporna slängs på fastlandet</b>.</li>
-    <li>Behoven gör vi på <b>offentlig toalett</b>. Närmast: gästhamnen i Alsvik.</li>
-    <li>Respektera <b>eldningsförbud</b>. Elda aldrig på klippa.</li>
-    <li>Vi lämnar fotavtryck och tar med oss minnen. Inget annat.</li>
+    <li class="now">
+      <span class="k">Koppel på hunden<span class="when">gäller i helgen</span></span>
+      <span class="v">Mars till september, utan undantag.</span>
+    </li>
+    <li>
+      <span class="k">Håll dig på leden</span>
+      <span class="v">Den finns bara tack vare markägarnas goda vilja. Ingen genväg är värd det.</span>
+    </li>
+    <li>
+      <span class="k">Skräpet åker med hem</span>
+      <span class="v">Soporna slängs på fastlandet. Ön har ingen sophantering för oss.</span>
+    </li>
+    <li>
+      <span class="k">Toaletten finns i Alsvik</span>
+      <span class="v">Gästhamnen är enda offentliga toaletten på etappen. Planera därefter.</span>
+    </li>
+    <li>
+      <span class="k">Elda inte</span>
+      <span class="v">Respektera eldningsförbud — och aldrig på klippa, den spricker.</span>
+    </li>
+    <li>
+      <span class="k">Lämna bara fotavtryck</span>
+      <span class="v">Ta med dig minnen. Inget annat.</span>
+    </li>
   </ul>
   <div class="links">
     <a href="https://www.naturvardsverket.se/amnesomraden/allemansratten/">Läs om allemansrätten</a>
