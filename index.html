@@ -52,6 +52,40 @@
   </div>
 </section>
 
+<section class="wrap" id="innan">
+  <div class="head">
+    <h2>Innan vi åker</h2>
+    <span class="eyebrow">11 saker att ta reda på</span>
+  </div>
+  <p class="lede">Det här går inte att slå upp här — det kräver ett samtal, en karttjänst eller en blick på vädret. De tre första kan välta planen, så ta dem först.</p>
+
+  <ul class="pack" id="innanlist">
+    <li class="grp">Kan göra planen omöjlig</li>
+    <li><label><input type="checkbox" data-k="i1"><span>Är delar av Svartsö naturreservat? <span class="hint">Länsstyrelsebeslut från 2005 finns. Föreskrifter går före allemansrätten. Sök på Svartsö i Naturvårdsverkets Skyddad natur.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i2"><span>Var får vi tälta? <span class="hint">Ring krogen, 08-542 472 55, när bordet bekräftas. Ingen publicerad plats finns.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i3"><span>Råder eldningsförbud? <span class="hint">Värmdö kommun, samma vecka. Gäller det faller alla tre mål vi tänkt laga.</span></span></label></li>
+
+    <li class="grp">Stoppar oss på plats</li>
+    <li><label><input type="checkbox" data-k="i4"><span>Får gasbehållaren tas ombord? <span class="hint">Fråga Waxholmsbolaget. Utan gas är brännaren värdelös.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i5"><span>Parkering vid Boda brygga <span class="hint">Bilen står där i två dygn. Går det, och kostar det?</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i6"><span>Biljetter till båten <span class="hint">App, ombord eller i förväg?</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i7"><span>Båttiderna, dagen innan <span class="hint">09:15 Boda→Alsvik lördag, 15:55 Alsvik→Boda söndag. Skriv på papper.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i8"><span>Lanthandelns söndagsöppet <span class="hint">Vi har café och handel inplanerat 14:45–15:45 före båten.</span></span></label></li>
+
+    <li class="grp">Småsaker</li>
+    <li><label><input type="checkbox" data-k="i9"><span>Allergier till båda restaurangerna <span class="hint">Krogen 08-542 472 55, Sågen 08-542 470 10. De vill veta i förväg.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i10"><span>Vädret, dagen innan <span class="hint">Regn ändrar tältfrågan. Svartsö Logi och Skärgårdshotellet är reserverna.</span></span></label></li>
+    <li><label><input type="checkbox" data-k="i11"><span>Frans utrustning <span class="hint">Koppeltvång gäller i augusti. Vattenskål?</span></span></label></li>
+  </ul>
+
+  <div class="links">
+    <a href="https://skyddadnatur.naturvardsverket.se/">Skyddad natur</a>
+    <a href="https://www.varmdo.se/">Värmdö kommun</a>
+    <a href="tel:+46854247255">Ring Krogen</a>
+    <a href="tel:+46854247010">Ring Sågen</a>
+  </div>
+</section>
+
 <section class="wrap" id="turen">
   <div class="head">
     <h2>Turen</h2>
@@ -381,7 +415,7 @@
 
 <script>
 (function(){
-  var boxes = document.querySelectorAll('#packlist input[type=checkbox]');
+  var boxes = document.querySelectorAll('#packlist input[type=checkbox], #innanlist input[type=checkbox]');
   var KEY = 'svartso-pack-2026-08';
   var state = {};
   try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { state = {}; }
