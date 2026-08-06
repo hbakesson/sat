@@ -356,3 +356,12 @@ main > section:first-child{padding-top:1.5rem}
 }
 .b-rows dd{font-size:.9rem;color:var(--ink)}
 .b-note{font-size:.84rem;color:var(--ink-soft);margin-top:.9rem;line-height:1.45}
+
+/* ---------- inbäddad karta ---------- */
+.livemap{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);
+  aspect-ratio:3/4;
+}
+.livemap iframe{display:block;width:100%;height:100%;border:0}
+@media (min-width:600px){ .livemap{aspect-ratio:4/3} }
