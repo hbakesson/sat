@@ -111,8 +111,10 @@ p{text-wrap:pretty}
   border-bottom:1px solid var(--line-soft);
   margin-top:1.8rem;
 }
-.navbar ul{display:flex;gap:.4rem;list-style:none;overflow-x:auto;padding:.55rem 1.1rem;scrollbar-width:none}
-.navbar ul::-webkit-scrollbar{display:none}
+.navbar ul{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:.4rem;list-style:none;padding:.55rem 1.1rem;
+}
 .navbar a{
   display:block;white-space:nowrap;text-decoration:none;
   font-size:.78rem;letter-spacing:.02em;color:var(--ink-soft);
