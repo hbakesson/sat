@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#e9ede6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1714" media="(prefers-color-scheme: dark)">
+<title>Hajk på Svartsö · 8–9 augusti</title>
+<meta name="description" content="Fickguide för vår hajk på Svartsö, etapp av Stockholm Archipelago Trail, lördag 8 och söndag 9 augusti.">
+<style>
+:root{
+  --paper:#e9ede6;
+  --surface:#f4f6f1;
+  --surface-2:#dfe5da;
+  --ink:#16261f;
+  --ink-soft:#4b5b53;
+  --ink-faint:#78877e;
+  --line:#ccd4c9;
+  --line-soft:#dbe1d6;
+  --sea:#1c5e78;
+  --sea-ink:#164c61;
+  --sun:#a97806;
+  --sun-graphic:#e0a924;
+  --bell:#5a56a6;
+  --shadow:0 1px 0 rgba(22,38,31,.05), 0 8px 24px -18px rgba(22,38,31,.5);
+
+  --f-display:ui-serif,"New York",Georgia,"Times New Roman",serif;
+  --f-body:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+
+  --w:min(100% - 2.2rem, 36rem);
+  --r:14px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#0f1714;
+    --surface:#16211c;
+    --surface-2:#1e2b24;
+    --ink:#dde5dd;
+    --ink-soft:#9daba1;
+    --ink-faint:#75857b;
+    --line:#2a3830;
+    --line-soft:#212d27;
+    --sea:#63b5d1;
+    --sea-ink:#8ecbe1;
+    --sun:#e9bc55;
+    --sun-graphic:#e9bc55;
+    --bell:#9d99e6;
+    --shadow:0 1px 0 rgba(0,0,0,.3), 0 10px 26px -20px #000;
+  }
+}
+:root[data-theme="light"]{
+  --paper:#e9ede6; --surface:#f4f6f1; --surface-2:#dfe5da;
+  --ink:#16261f; --ink-soft:#4b5b53; --ink-faint:#78877e;
+  --line:#ccd4c9; --line-soft:#dbe1d6;
+  --sea:#1c5e78; --sea-ink:#164c61; --sun:#a97806; --sun-graphic:#e0a924; --bell:#5a56a6;
+  --shadow:0 1px 0 rgba(22,38,31,.05), 0 8px 24px -18px rgba(22,38,31,.5);
+}
+:root[data-theme="dark"]{
+  --paper:#0f1714; --surface:#16211c; --surface-2:#1e2b24;
+  --ink:#dde5dd; --ink-soft:#9daba1; --ink-faint:#75857b;
+  --line:#2a3830; --line-soft:#212d27;
+  --sea:#63b5d1; --sea-ink:#8ecbe1; --sun:#e9bc55; --sun-graphic:#e9bc55; --bell:#9d99e6;
+  --shadow:0 1px 0 rgba(0,0,0,.3), 0 10px 26px -20px #000;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--f-body);
+  font-size:16.5px;
+  line-height:1.55;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--sea-ink);text-decoration-thickness:1px;text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--sea);outline-offset:3px;border-radius:4px}
+
+.wrap{width:var(--w);margin-inline:auto}
+
+/* ---------- typografi ---------- */
+h1,h2,h3{font-family:var(--f-display);font-weight:600;text-wrap:balance;letter-spacing:-.015em;line-height:1.12}
+h1{font-size:clamp(2.5rem,13vw,3.6rem);letter-spacing:-.03em}
+h2{font-size:1.6rem}
+h3{font-size:1.08rem;letter-spacing:-.005em}
+.eyebrow{
+  font-family:var(--f-mono);font-size:.66rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-faint);
+}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+p{text-wrap:pretty}
+
+/* ---------- hero ---------- */
+.hero{padding:calc(env(safe-area-inset-top) + 2.4rem) 0 1.6rem}
+.hero .eyebrow{display:block;margin-bottom:.9rem}
+.hero h1{margin:0 0 .1rem;color:var(--ink)}
+.hero h1 em{font-style:normal;display:block;color:var(--sea)}
+.dates{
+  font-family:var(--f-mono);font-size:.82rem;letter-spacing:.04em;
+  color:var(--ink-soft);margin-top:.75rem;
+}
+.dates b{color:var(--ink);font-weight:600}
+
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden;margin-top:1.5rem;
+}
+.stat{background:var(--surface);padding:.7rem .5rem .75rem;text-align:center}
+.stat .v{display:block;font-family:var(--f-mono);font-size:1.02rem;font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.stat .k{display:block;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:.2rem}
+
+/* ---------- sticky nav ---------- */
+.navbar{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  -webkit-backdrop-filter:saturate(1.6) blur(10px);
+  backdrop-filter:saturate(1.6) blur(10px);
+  border-bottom:1px solid var(--line-soft);
+  margin-top:1.8rem;
+}
+.navbar ul{display:flex;gap:.4rem;list-style:none;overflow-x:auto;padding:.55rem 1.1rem;scrollbar-width:none}
+.navbar ul::-webkit-scrollbar{display:none}
+.navbar a{
+  display:block;white-space:nowrap;text-decoration:none;
+  font-size:.78rem;letter-spacing:.02em;color:var(--ink-soft);
+  border:1px solid var(--line);border-radius:100px;
+  padding:.34rem .78rem;background:var(--surface);
+}
+.navbar a:active{background:var(--surface-2)}
+
+/* ---------- sektioner ---------- */
+section{padding:2.6rem 0 .4rem;scroll-margin-top:3.4rem}
+.head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin-bottom:1.1rem}
+.head .eyebrow{flex:none}
+.lede{color:var(--ink-soft);margin-top:.55rem;font-size:.96rem}
+
+/* ---------- kort ---------- */
+.card{
+  background:var(--surface);border:1px solid var(--line);
+  border-radius:var(--r);padding:1rem 1.05rem;box-shadow:var(--shadow);
+}
+.stack{display:flex;flex-direction:column;gap:.7rem}
+
+.alert{
+  display:flex;gap:.8rem;align-items:flex-start;
+  background:var(--surface);border:1px solid var(--line);
+  border-left:3px solid var(--sun-graphic);
+  border-radius:10px;padding:.8rem .9rem;
+}
+.alert .tag{
+  font-family:var(--f-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--sun);flex:none;padding-top:.2rem;
+}
+.alert p{font-size:.9rem;line-height:1.5}
+.alert strong{font-weight:600}
+
+/* ---------- karta ---------- */
+.mapbox{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.6rem .6rem .3rem;box-shadow:var(--shadow)}
+.mapbox svg{display:block;width:100%;height:auto}
+.legend{display:flex;flex-wrap:wrap;gap:.5rem .95rem;padding:.55rem .5rem .7rem;border-top:1px solid var(--line-soft);margin-top:.3rem}
+.legend span{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;color:var(--ink-soft)}
+.swatch{width:16px;height:0;border-top-width:2.5px;border-top-style:solid;flex:none}
+.caption{font-size:.72rem;color:var(--ink-faint);margin-top:.6rem;font-style:italic}
+
+.links{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.85rem}
+.links a{
+  font-size:.78rem;text-decoration:none;color:var(--ink);
+  border:1px solid var(--line);border-radius:100px;padding:.36rem .8rem;background:var(--surface);
+}
+.links a::after{content:" ↗";color:var(--ink-faint);font-size:.72em}
+
+/* ---------- rutt / tidslinje ---------- */
+.route{list-style:none;position:relative;padding-left:1.65rem;margin-top:1.1rem}
+.route::before{
+  content:"";position:absolute;left:.32rem;top:.55rem;bottom:1.1rem;width:5px;border-radius:3px;
+  background:repeating-linear-gradient(
+    to bottom,
+    var(--sea) 0 14px,
+    var(--sun-graphic) 14px 22px,
+    var(--ink-faint) 22px 26px,
+    var(--sun-graphic) 26px 34px,
+    var(--sea) 34px 48px
+  );
+  opacity:.85;
+}
+.route li{position:relative;padding:0 0 1.25rem}
+.route li::before{
+  content:"";position:absolute;left:-1.65rem;top:.42rem;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--paper);border:2.5px solid var(--sea);
+  margin-left:.03rem;
+}
+.route li.is-food::before{border-color:var(--sun-graphic)}
+.route li.is-path::before{border-color:var(--bell)}
+.route li.is-end::before{background:var(--sea);border-color:var(--sea)}
+.route .where{font-family:var(--f-display);font-size:1.06rem;font-weight:600;letter-spacing:-.01em}
+.route .meta{
+  font-family:var(--f-mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-faint);margin-top:.15rem;
+}
+.route .what{font-size:.9rem;color:var(--ink-soft);margin-top:.35rem}
+.route .what b{color:var(--ink);font-weight:600}
+.flower{font-weight:600}
+.flower.west{color:var(--sun)}
+.flower.east{color:var(--bell)}
+
+/* ---------- alternativ ---------- */
+.opts{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.2rem}
+.opt{
+  display:flex;gap:.85rem;align-items:center;
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:.75rem .9rem;
+}
+.opt.pick{border-color:var(--sea);background:color-mix(in srgb, var(--sea) 7%, var(--surface))}
+.opt .km{font-family:var(--f-mono);font-size:1.05rem;font-variant-numeric:tabular-nums;color:var(--sea-ink);flex:none;width:3.9rem}
+.opt .t{font-size:.88rem;line-height:1.4}
+.opt .t b{display:block;font-weight:600;font-size:.94rem;color:var(--ink)}
+.opt .t span{color:var(--ink-soft)}
+
+/* ---------- listor / mat ---------- */
+.places{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.place{background:var(--surface);padding:.8rem .95rem;display:flex;gap:.9rem;align-items:baseline}
+.place .role{
+  font-family:var(--f-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-faint);flex:none;width:4.6rem;padding-top:.15rem;
+}
+.place .body{flex:1}
+.place .body a{font-weight:600;font-family:var(--f-display);font-size:1.02rem;text-decoration:none;color:var(--ink)}
+.place .body a:hover{text-decoration:underline;text-decoration-color:var(--sea)}
+.place .body p{font-size:.85rem;color:var(--ink-soft);margin-top:.1rem}
+
+.docks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.docks li{background:var(--surface);padding:.75rem .85rem}
+.docks .n{font-family:var(--f-display);font-weight:600;font-size:1rem}
+.docks .d{font-size:.76rem;color:var(--ink-soft);margin-top:.1rem}
+
+/* ---------- packlista ---------- */
+.pack{list-style:none;display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.pack li{background:var(--surface)}
+.pack label{
+  display:flex;gap:.75rem;align-items:center;
+  padding:.72rem .9rem;cursor:pointer;font-size:.94rem;
+  transition:color .15s ease, opacity .15s ease;
+}
+.pack input{
+  appearance:none;-webkit-appearance:none;flex:none;
+  width:20px;height:20px;border:1.5px solid var(--ink-faint);border-radius:6px;
+  background:transparent;display:grid;place-content:center;transition:.15s ease;
+}
+.pack input::after{
+  content:"";width:10px;height:6px;border-left:2px solid var(--paper);border-bottom:2px solid var(--paper);
+  transform:rotate(-45deg) scale(0);transition:transform .15s ease;
+}
+.pack input:checked{background:var(--sea);border-color:var(--sea)}
+.pack input:checked::after{transform:rotate(-45deg) scale(1)}
+.pack input:checked + span{color:var(--ink-faint);text-decoration:line-through;text-decoration-color:var(--line)}
+.pack .hint{display:block;font-size:.74rem;color:var(--ink-faint);text-decoration:none}
+
+/* ---------- regler ---------- */
+.rules{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.rules li{display:flex;gap:.7rem;font-size:.9rem;color:var(--ink-soft);line-height:1.5}
+.rules li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--sea);margin-top:.52rem}
+.rules b{color:var(--ink);font-weight:600}
+
+footer{margin-top:3rem;padding:1.6rem 0 calc(env(safe-area-inset-bottom) + 2.4rem);border-top:1px solid var(--line-soft)}
+footer p{font-size:.76rem;color:var(--ink-faint);line-height:1.6}
+footer a{color:var(--ink-soft)}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+@media (min-width:600px){
+  body{font-size:17px}
+  .hero{padding-top:3.6rem}
+}
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <span class="eyebrow">Stockholm Archipelago Trail · Etapp Svartsö</span>
+  <h1>Hajk på<em>Svartsö</em></h1>
+  <p class="dates"><b>LÖR 8 AUG</b> &nbsp;→&nbsp; <b>SÖN 9 AUG</b> &nbsp;·&nbsp; två dagar, ett varv</p>
+  <div class="stats">
+    <div class="stat"><span class="v">17,9</span><span class="k">km totalt</span></div>
+    <div class="stat"><span class="v">4,5</span><span class="k">tim gång</span></div>
+    <div class="stat"><span class="v">79</span><span class="k">höjdmeter</span></div>
+    <div class="stat"><span class="v">Lätt</span><span class="k">svårighet</span></div>
+  </div>
+</header>
+
+<nav class="navbar" aria-label="Innehåll">
+  <ul>
+    <li><a href="#karta">Karta</a></li>
+    <li><a href="#lordag">Lördag</a></li>
+    <li><a href="#sondag">Söndag</a></li>
+    <li><a href="#mat">Mat &amp; boende</a></li>
+    <li><a href="#bat">Båten</a></li>
+    <li><a href="#packa">Packa</a></li>
+    <li><a href="#regler">Regler</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section class="wrap" id="viktigt">
+  <div class="stack">
+    <div class="alert">
+      <span class="tag">Vatten</span>
+      <p><strong>Vatten och toalett finns bara vid gästhamnen i Alsvik.</strong> Fyll flaskorna där — det är enda stället på hela etappen.</p>
+    </div>
+    <div class="alert">
+      <span class="tag">Riktning</span>
+      <p>Leden är uppmärkt <strong>motsols</strong>. Går du åt andra hållet ser du markeringarna i ryggen.</p>
+    </div>
+    <div class="alert">
+      <span class="tag">Märken</span>
+      <p>Blått band = havet, gult = solen, reflex i mitten = horisonten. Tätare markering i vägskäl, glesare där det är uppenbart. <strong>Ser du ingen markering — fortsätt rakt fram.</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="karta">
+  <div class="head">
+    <h2>Ön i grova drag</h2>
+    <span class="eyebrow">Skiss</span>
+  </div>
+
+  <div class="mapbox">
+    <svg viewBox="0 0 320 232" role="img" aria-label="Schematisk skiss av Svartsö: en liggande åtta av grusvägar mellan fyra ångbåtsbryggor, med Vitsippestigen i väster och Blåklockestigen i öster.">
+      <!-- vatten -->
+      <g fill="var(--sea)" opacity=".16">
+        <ellipse cx="108" cy="86" rx="21" ry="12" transform="rotate(-18 108 86)"/>
+        <ellipse cx="96" cy="118" rx="12" ry="7" transform="rotate(-10 96 118)"/>
+        <path d="M252 104c14-6 26-4 34 3 -9 8-24 11-36 6z"/>
+      </g>
+      <g fill="var(--ink-faint)" font-family="var(--f-body)" font-size="6.4" opacity=".9">
+        <text x="108" y="88" text-anchor="middle">Storträsk</text>
+        <text x="96" y="120" text-anchor="middle">Lillträsk</text>
+      </g>
+
+      <!-- grusvägar -->
+      <g fill="none" stroke="var(--ink-soft)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".75">
+        <path d="M158 26 L158 60"/>
+        <path d="M158 60 L104 60 L82 68"/>
+        <path d="M46 150 L158 150"/>
+        <path d="M158 150 L286 150"/>
+        <path d="M158 150 L158 190"/>
+        <path d="M120 150 L120 196"/>
+        <path d="M158 60 L158 150"/>
+        <path d="M246 150 L246 124 L206 116"/>
+      </g>
+
+      <!-- vitsippestigen (väst) -->
+      <path d="M82 68 C64 84 60 110 54 132 L46 150" fill="none" stroke="var(--sun-graphic)" stroke-width="2.4" stroke-dasharray="1.5 5" stroke-linecap="round"/>
+      <!-- blåklockestigen (öst) -->
+      <path d="M206 116 C198 128 196 136 194 150" fill="none" stroke="var(--bell)" stroke-width="2.4" stroke-dasharray="1.5 5" stroke-linecap="round"/>
+
+      <!-- noder -->
+      <g>
+        <g fill="var(--sea)">
+          <rect x="154" y="22" width="8" height="8" rx="1.5"/>
+          <rect x="116" y="192" width="8" height="8" rx="1.5"/>
+          <rect x="42" y="146" width="8" height="8" rx="1.5"/>
+          <rect x="282" y="146" width="8" height="8" rx="1.5"/>
+        </g>
+        <circle cx="158" cy="150" r="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.6"/>
+        <g fill="var(--sun-graphic)">
+          <circle cx="158" cy="190" r="4"/>
+          <circle cx="76" cy="150" r="4"/>
+          <circle cx="158" cy="41" r="4"/>
+        </g>
+      </g>
+
+      <!-- etiketter -->
+      <g font-family="var(--f-body)" font-size="7.6" fill="var(--ink)">
+        <text x="166" y="20">Svartsö Norra</text>
+        <text x="166" y="45">Skärgårdshotellet</text>
+        <text x="38" y="142">Alsvik</text>
+        <text x="70" y="166">Krogen</text>
+        <text x="128" y="207">Skälvik</text>
+        <text x="238" y="143" text-anchor="end">Söderboudd →</text>
+        <text x="166" y="194">Sågen &amp; skolan</text>
+        <text x="150" y="146" text-anchor="end">4-vägs&#8203;korsningen</text>
+      </g>
+      <g font-family="var(--f-body)" font-size="6.6" font-style="italic">
+        <text x="40" y="106" fill="var(--sun)">Vitsippe&#8203;stigen</text>
+        <text x="212" y="134" fill="var(--bell)">Blåklocke&#8203;stigen</text>
+      </g>
+    </svg>
+    <div class="legend">
+      <span><i class="swatch" style="border-top-color:var(--ink-soft)"></i> Grusväg</span>
+      <span><i class="swatch" style="border-top-color:var(--sun-graphic);border-top-style:dotted;border-top-width:3px"></i> Vitsippestigen</span>
+      <span><i class="swatch" style="border-top-color:var(--bell);border-top-style:dotted;border-top-width:3px"></i> Blåklockestigen</span>
+      <span><i class="swatch" style="border-top-color:var(--sea);border-top-width:6px"></i> Brygga</span>
+    </div>
+  </div>
+  <p class="caption">Schematisk skiss — inte skalenlig. Ta med riktig karta.</p>
+
+  <div class="links">
+    <a href="https://map.stockholmarchipelagotrail.com/#svartso">Interaktiv karta</a>
+    <a href="https://drive.google.com/file/d/1_yBkwuI5-VacIskUWL6wkrq7PRoVuiBB/view">GPX-fil</a>
+    <a href="https://stockholmarchipelagotrail.com/app/uploads/2024/10/en-sat-svartsoe-final.pdf">Karta att skriva ut (PDF)</a>
+  </div>
+</section>
+
+<section class="wrap" id="lordag">
+  <div class="head">
+    <h2>Lördag</h2>
+    <span class="eyebrow">Ca 9 km</span>
+  </div>
+  <p class="lede">Västra varvet: ner längs sjön, Vitsippestigen söderut till Alsvik, sedan österut genom beteslandskapet till öns mitt. Middag på Sågen, sova på hotellet.</p>
+
+  <ol class="route">
+    <li>
+      <div class="where">Svartsö Norra brygga</div>
+      <div class="meta">Start · 0,0 km</div>
+      <p class="what">Av båten, söderut på grusvägen.</p>
+    </li>
+    <li class="is-food">
+      <div class="where">Svartsö Skärgårdshotell</div>
+      <div class="meta">+300 m · uppe i backen</div>
+      <p class="what">Lämna packningen här. Vidare söderut med dagsryggsäck.</p>
+    </li>
+    <li>
+      <div class="where">3-vägskorsningen</div>
+      <div class="meta">Knappt 500 m från kajen</div>
+      <p class="what"><b>Sväng höger, västerut</b> in på den mindre grusvägen längs sjön. Sjön är <b>öns dricksvatten</b> — bada inte i den.</p>
+    </li>
+    <li class="is-path">
+      <div class="where">Fälthörnet</div>
+      <div class="meta">700 m grusväg + 400 m skogsstig</div>
+      <p class="what">Här svänger leden <b>tvärt vänster, mer än 90°</b>, in på en mindre stig. Lätt att missa. Härifrån gäller träskyltar med målade <span class="flower west">vitsippor</span>.</p>
+    </li>
+    <li class="is-path">
+      <div class="where">Vitsippestigen</div>
+      <div class="meta">1 600 m söderut · teknisk</div>
+      <p class="what">Smalare och krångligare än resten. Inte för barnvagn. Slutar i en 3-vägskorsning mellan grusvägar — ta <b>vänster, österut</b>.</p>
+    </li>
+    <li class="is-end">
+      <div class="where">Alsvik</div>
+      <div class="meta">3,6 km från Norra</div>
+      <p class="what"><b>Vatten och toalett vid gästhamnen — fyll på här.</b> Lanthandel och café. Cykel att hyra.</p>
+    </li>
+    <li class="is-food">
+      <div class="where">Svartsö Krog</div>
+      <div class="meta">+250 m österut</div>
+      <p class="what">Lunchstopp om vi ligger bra i tid. Annars vidare.</p>
+    </li>
+    <li>
+      <div class="where">Genom hagen</div>
+      <div class="meta">+300 m väg, sedan avtag</div>
+      <p class="what">Avtagsväg upp till <b>höger</b>, ca 100 m, sedan <b>vänster norrut</b> in i skogen. Uppför, utför, ner till en hage. Följ hagens västra kant till grinden och ut på grusvägen. <b>Höger, österut.</b></p>
+    </li>
+    <li>
+      <div class="where">Skälvik-korsningen</div>
+      <div class="meta">+1 200 m · skylt mot söder</div>
+      <p class="what">Bryggan ligger 700 m söderut. Vi går <b>rakt fram, österut</b>.</p>
+    </li>
+    <li>
+      <div class="where">Stora stenen</div>
+      <div class="meta">+50 m</div>
+      <p class="what">Leden viker lätt <b>höger vid en stor sten</b> in på en bred skogsstig. Knappt 200 m till nästa grusväg.</p>
+    </li>
+    <li class="is-food">
+      <div class="where">Bistro Sågen</div>
+      <div class="meta">Söderut, 500 m förbi skolan</div>
+      <p class="what">Middagen. Vi passerar Svartsö skola på vägen ner. Boka bord i förväg.</p>
+    </li>
+    <li class="is-end">
+      <div class="where">Tillbaka till hotellet</div>
+      <div class="meta">100 m + 1,2 km norrut</div>
+      <p class="what">Upp till <b>4-vägskorsningen</b> — öns hjärta, vi passerar den flera gånger — och sedan rakt norrut. Bastun går att hyra.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="wrap" id="sondag">
+  <div class="head">
+    <h2>Söndag</h2>
+    <span class="eyebrow">Östra varvet</span>
+  </div>
+  <p class="lede">Öppna grusvägar österut och Blåklockestigen tillbaka. Välj upplägg efter vilken båt vi tar hem.</p>
+
+  <div class="opts">
+    <div class="opt pick">
+      <span class="km">7,6 km</span>
+      <span class="t"><b>Varvet → Söderboudd</b><span>Hela östra slingan, avsluta med båt från Söderboudd. Vårt förstahandsval.</span></span>
+    </div>
+    <div class="opt">
+      <span class="km">8,7 km</span>
+      <span class="t"><b>Varvet → Norra</b><span>Samma slinga men västerut tillbaka och norrut till Svartsö Norra brygga.</span></span>
+    </div>
+    <div class="opt">
+      <span class="km">4,5 km</span>
+      <span class="t"><b>Rakt österut</b><span>Bara grusvägen till Söderboudd. Kort, platt, barnvagnsvänlig.</span></span>
+    </div>
+  </div>
+
+  <ol class="route">
+    <li>
+      <div class="where">Hotellet → 4-vägskorsningen</div>
+      <div class="meta">1,2 km söderut</div>
+      <p class="what">Sedan <b>österut</b> på grusvägen.</p>
+    </li>
+    <li>
+      <div class="where">2,8 km på grusväg</div>
+      <div class="meta">Rakt fram · inga avtag</div>
+      <p class="what">Fram till en 3-vägskorsning. Rakt fram = Söderboudd. Vi tar <b>norrut</b>.</p>
+    </li>
+    <li>
+      <div class="where">90-graderssvängen</div>
+      <div class="meta">+300 m norrut</div>
+      <p class="what">Havsvik på höger sida, fält på vänster. Följ grusvägen <b>vänster, västerut</b> längs fältets norra kant.</p>
+    </li>
+    <li class="is-path">
+      <div class="where">Brant backe → Blåklockestigen</div>
+      <div class="meta">+500 m · ingen SAT-markering</div>
+      <p class="what">Efter backen viker leden in på en stig <b>vänster, mer än 90°, söderut</b>. Här finns <b>inga SAT-band</b> — markägaren vill inte. Följ träskyltarna med <span class="flower east">blåklockor</span>.</p>
+    </li>
+    <li class="is-path">
+      <div class="where">Diket</div>
+      <div class="meta">+800 m</div>
+      <p class="what">Här dyker SAT-markeringarna upp igen. 300 m till söderut ner på den stora öst–västliga grusvägen.</p>
+    </li>
+    <li class="is-end">
+      <div class="where">Vägvalet</div>
+      <div class="meta">Vänster 1,7 km · höger 1,6 km</div>
+      <p class="what"><b>Vänster, österut:</b> 1,7 km till Söderboudd brygga. <b>Höger, västerut:</b> 1,6 km tillbaka till 4-vägskorsningen och sedan 1,2 km norrut till Svartsö Norra.</p>
+    </li>
+  </ol>
+</section>
+
+<section class="wrap" id="mat">
+  <div class="head">
+    <h2>Mat &amp; boende</h2>
+    <span class="eyebrow">Ring i förväg</span>
+  </div>
+  <div class="places">
+    <div class="place">
+      <span class="role">Sova</span>
+      <div class="body">
+        <a href="http://www.svartsonorra.se">Svartsö Skärgårdshotell</a>
+        <p>Hotell och vandrarhem, 300 m från Norra bryggan. Bastu och cykel att hyra.</p>
+      </div>
+    </div>
+    <div class="place">
+      <span class="role">Middag</span>
+      <div class="body">
+        <a href="http://www.bistrosagen.se">Bistro Sågen</a>
+        <p>Söder om 4-vägskorsningen, förbi skolan. Enligt leden: väl värt besöket.</p>
+      </div>
+    </div>
+    <div class="place">
+      <span class="role">Lunch</span>
+      <div class="body">
+        <a href="http://www.svartsokrog.se">Svartsö Krog</a>
+        <p>250 m öster om Alsvik. Har även glampingtält.</p>
+      </div>
+    </div>
+    <div class="place">
+      <span class="role">Handla</span>
+      <div class="body">
+        <a href="http://www.svartsolanthandel.se">Lanthandeln i Alsvik</a>
+        <p>Öppet mer eller mindre året om. Café, gästhamn, cykeluthyrning.</p>
+      </div>
+    </div>
+    <div class="place">
+      <span class="role">Extra</span>
+      <div class="body">
+        <a href="https://sites.google.com/view/svarts-kajak-kajakuthyrning-oc/startsida">Svartsö Kajak</a>
+        <p>Kajak att hyra om vi får tid över. Se även <a href="http://www.svartso.se">svartso.se</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="bat">
+  <div class="head">
+    <h2>Båten</h2>
+    <span class="eyebrow">Fyra bryggor</span>
+  </div>
+  <p class="lede">Waxholmsbåten går året om från Stockholm City via Vaxholm, Åsättra eller Boda. Sök på bryggans namn — inte bara &quot;Svartsö&quot;.</p>
+
+  <ul class="docks">
+    <li><span class="n">Svartsö Norra</span><span class="d">Vår start. Hotellet 300 m upp.</span></li>
+    <li><span class="n">Alsvik</span><span class="d">Lanthandel, café, gästhamn.</span></li>
+    <li><span class="n">Skälvik</span><span class="d">700 m söder om leden.</span></li>
+    <li><span class="n">Söderboudd</span><span class="d">Östra änden. Hemresa söndag.</span></li>
+  </ul>
+
+  <div class="alert" style="margin-top:.9rem">
+    <span class="tag">Kolla</span>
+    <p><strong>Turerna varierar mellan helger och bryggor.</strong> Kolla avgångstiderna dagen innan och skriv ner dem — täckningen på ön är inte att lita på.</p>
+  </div>
+
+  <div class="links">
+    <a href="https://stockholmarchipelagotrail.com/sv/section/etapp-svartso/">Reseplanerare (SAT)</a>
+    <a href="https://www.bout.fi/stockholm-archipelago">Taxibåt via BOUT</a>
+  </div>
+</section>
+
+<section class="wrap" id="packa">
+  <div class="head">
+    <h2>Packa</h2>
+    <span class="eyebrow">Bocka av</span>
+  </div>
+  <ul class="pack" id="packlist">
+    <li><label><input type="checkbox" data-k="p1"><span>Vattenflaska <span class="hint">Enda påfyllningen är Alsvik</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p2"><span>Regnjacka</span></label></li>
+    <li><label><input type="checkbox" data-k="p3"><span>Badkläder och handduk <span class="hint">Lillträsk, inte Storträsk</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p4"><span>Myggmedel</span></label></li>
+    <li><label><input type="checkbox" data-k="p5"><span>Inkörda skor <span class="hint">Grusväg mest, stig i två partier</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p6"><span>Plåster och blåsskydd</span></label></li>
+    <li><label><input type="checkbox" data-k="p7"><span>Powerbank <span class="hint">Kartan äter batteri</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p8"><span>Pannlampa <span class="hint">Ledmärkena har reflex</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p9"><span>Soppåse <span class="hint">Allt skräp åker med hem till fastlandet</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p10"><span>Koppel</span></label></li>
+    <li><label><input type="checkbox" data-k="p11"><span>Utskriven karta och båttider</span></label></li>
+  </ul>
+</section>
+
+<section class="wrap" id="regler">
+  <div class="head">
+    <h2>Så uppför vi oss</h2>
+    <span class="eyebrow">Allemansrätten</span>
+  </div>
+  <ul class="rules">
+    <li>Leden finns bara tack vare <b>markägarnas goda vilja</b>. Gå där leden går, även när en genväg lockar.</li>
+    <li><b>Hundar ska vara kopplade</b> mars–september. Det gäller alltså oss nu.</li>
+    <li>Allt skräp följer med hem — <b>soporna slängs på fastlandet</b>.</li>
+    <li>Behoven gör vi på <b>offentlig toalett</b>. Närmast: gästhamnen i Alsvik.</li>
+    <li>Respektera <b>eldningsförbud</b>. Elda aldrig på klippa.</li>
+    <li>Vi lämnar fotavtryck och tar med oss minnen. Inget annat.</li>
+  </ul>
+  <div class="links">
+    <a href="https://www.naturvardsverket.se/amnesomraden/allemansratten/">Läs om allemansrätten</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>
+    Uppgifter om leden, avstånd och vägval är hämtade från
+    <a href="https://stockholmarchipelagotrail.com/sv/section/etapp-svartso/">Stockholm Archipelago Trail — Etapp Svartsö</a>
+    och etappens steg-för-steg-beskrivning. Öppettider och båttider kan ha ändrats: kolla innan avfärd.
+    Ön har ca 65 bofasta — var en bra gäst.
+  </p>
+</footer>
+
+<script>
+(function(){
+  var boxes = document.querySelectorAll('#packlist input[type=checkbox]');
+  var KEY = 'svartso-pack-2026-08';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { state = {}; }
+
+  boxes.forEach(function(box){
+    if (state[box.dataset.k]) box.checked = true;
+    box.addEventListener('change', function(){
+      state[box.dataset.k] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
