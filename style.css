@@ -430,3 +430,21 @@ main > section:first-child{padding-top:1.5rem}
   display:block;font-style:normal;font-family:var(--f-body);font-weight:400;
   font-size:.76rem;color:var(--ink-soft);letter-spacing:0;margin-top:.2rem;line-height:1.45;
 }
+
+/* ---------- dagskartor ---------- */
+.daymaps{display:flex;flex-direction:column;gap:.9rem}
+.daymap{
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:.9rem .7rem .3rem;box-shadow:var(--shadow);
+}
+.daymap figcaption{padding:0 .3rem .3rem}
+.dm-day{
+  display:block;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sun);
+}
+.dm-title{display:block;font-family:var(--f-display);font-weight:600;font-size:1.18rem;letter-spacing:-.015em;margin-top:.15rem}
+.dm-meta{
+  display:block;font-family:var(--f-mono);font-size:.66rem;letter-spacing:.06em;
+  color:var(--ink-faint);margin-top:.2rem;
+}
+.daymap svg{display:block;width:100%;height:auto;margin-top:.3rem}

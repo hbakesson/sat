@@ -49,84 +49,122 @@
 
   <div class="head" style="margin-top:2.2rem">
     <h2>Utan täckning</h2>
-    <span class="eyebrow">Skiss</span>
+    <span class="eyebrow">Skisser</span>
   </div>
+  <p class="lede">Två skisser, en per dag. Blå linje är dagens sträckning, grått är resten av leden. Inte skalenliga — ta med utskriven karta.</p>
 
-  <div class="mapbox">
-    <svg viewBox="0 0 320 232" role="img" aria-label="Schematisk skiss av Svartsö: en liggande åtta av grusvägar mellan fyra ångbåtsbryggor, med Vitsippestigen i väster och Blåklockestigen i öster.">
-      <!-- vatten -->
-      <g fill="var(--sea)" opacity=".16">
+  <div class="daymaps">
+    <figure class="daymap">
+      <figcaption>
+        <span class="dm-day">Lördag 8 aug</span>
+        <span class="dm-title">Östra varvet</span>
+        <span class="dm-meta">13,3 km · start och mål Alsvik</span>
+      </figcaption>
+    <svg viewBox="0 0 320 210" role="img" aria-label="Lördagens rutt: från Alsvik österut längs grusvägen till 4-vägskorsningen och vidare ut till Blåklockestigen, sedan tillbaka västerut samma väg till Alsvik.">
+      <g fill="var(--sea)" opacity=".14">
         <ellipse cx="108" cy="86" rx="21" ry="12" transform="rotate(-18 108 86)"/>
         <ellipse cx="96" cy="118" rx="12" ry="7" transform="rotate(-10 96 118)"/>
         <path d="M252 104c14-6 26-4 34 3 -9 8-24 11-36 6z"/>
       </g>
-      <g fill="var(--ink-faint)" font-family="var(--f-body)" font-size="6.4" opacity=".9">
-        <text x="108" y="88" text-anchor="middle">Storträsk</text>
-        <text x="96" y="120" text-anchor="middle">Lillträsk</text>
-      </g>
-
-      <!-- grusvägar -->
-      <g fill="none" stroke="var(--ink-soft)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity=".75">
+      <g fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
         <path d="M158 26 L158 60"/>
         <path d="M158 60 L104 60 L82 68"/>
-        <path d="M46 150 L158 150"/>
-        <path d="M158 150 L286 150"/>
+        <path d="M46 150 L286 150"/>
         <path d="M158 150 L158 190"/>
         <path d="M120 150 L120 196"/>
         <path d="M158 60 L158 150"/>
         <path d="M246 150 L246 124 L206 116"/>
+        <path d="M82 68 C64 84 60 110 54 132 L46 150" stroke-dasharray="1.5 5"/>
+        <path d="M206 116 C198 128 196 136 194 150" stroke-dasharray="1.5 5"/>
       </g>
-
-      <!-- vitsippestigen (väst) -->
-      <path d="M82 68 C64 84 60 110 54 132 L46 150" fill="none" stroke="var(--sun-graphic)" stroke-width="2.4" stroke-dasharray="1.5 5" stroke-linecap="round"/>
-      <!-- blåklockestigen (öst) -->
-      <path d="M206 116 C198 128 196 136 194 150" fill="none" stroke="var(--bell)" stroke-width="2.4" stroke-dasharray="1.5 5" stroke-linecap="round"/>
-
-      <!-- noder -->
+      <g fill="none" stroke="var(--sea)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M46 150 L246 150"/>
+        <path d="M246 150 L246 124 L206 116"/>
+      </g>
+      <path d="M206 116 C198 128 196 136 194 150" fill="none" stroke="var(--bell)" stroke-width="3.4" stroke-dasharray="2 5.5" stroke-linecap="round"/>
+      <path d="M158 150 L158 190" fill="none" stroke="var(--sun-graphic)" stroke-width="2.6" stroke-dasharray="3 4"/>
+      <g><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(100 143) rotate(0)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(210 143) rotate(0)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(246 134) rotate(-90)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(196 132) rotate(110)"/></g>
       <g>
-        <g fill="var(--sea)">
-          <rect x="154" y="22" width="8" height="8" rx="1.5"/>
-          <rect x="116" y="192" width="8" height="8" rx="1.5"/>
-          <rect x="42" y="146" width="8" height="8" rx="1.5"/>
-          <rect x="282" y="146" width="8" height="8" rx="1.5"/>
-        </g>
-        <circle cx="158" cy="150" r="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.6"/>
-        <g fill="var(--sun-graphic)">
-          <circle cx="158" cy="190" r="4"/>
-          <circle cx="76" cy="150" r="4"/>
-          <circle cx="158" cy="41" r="4"/>
-        </g>
+        <rect x="42" y="145" width="10" height="10" rx="2" fill="var(--sea)"/>
+        <circle cx="158" cy="150" r="6.5" fill="var(--paper)" stroke="var(--sea)" stroke-width="3"/>
+        <circle cx="76" cy="150" r="4.2" fill="var(--sun-graphic)"/>
+        <circle cx="158" cy="190" r="4.2" fill="var(--sun-graphic)"/>
       </g>
-
-      <!-- etiketter -->
       <g font-family="var(--f-body)" font-size="7.6" fill="var(--ink)">
-        <text x="166" y="20">Svartsö Norra</text>
-        <text x="166" y="45">Skärgårdshotellet</text>
-        <text x="38" y="142">Alsvik</text>
-        <text x="70" y="166">Krogen</text>
-        <text x="128" y="207">Skälvik</text>
-        <text x="238" y="143" text-anchor="end">Söderboudd →</text>
-        <text x="166" y="194">Sågen &amp; skolan</text>
-        <text x="150" y="146" text-anchor="end">4-vägs&#8203;korsningen</text>
+        <text x="38" y="141">Alsvik</text>
+        <text x="66" y="167">Krogen</text>
+        <text x="150" y="145" text-anchor="end">4-vägskorsningen</text>
+        <text x="166" y="194">Sågen</text>
+        <text x="286" y="145" text-anchor="end">Söderboudd →</text>
       </g>
-      <g font-family="var(--f-body)" font-size="6.6" font-style="italic">
-        <text x="40" y="106" fill="var(--sun)">Vitsippe&#8203;stigen</text>
-        <text x="212" y="134" fill="var(--bell)">Blåklocke&#8203;stigen</text>
+      <g font-family="var(--f-body)" font-size="6.8" font-style="italic">
+        <text x="214" y="134" fill="var(--bell)">Blåklockestigen</text>
       </g>
     </svg>
-    <div class="legend">
-      <span><i class="swatch" style="border-top-color:var(--ink-soft)"></i> Grusväg</span>
-      <span><i class="swatch" style="border-top-color:var(--sun-graphic);border-top-style:dotted;border-top-width:3px"></i> Vitsippestigen</span>
-      <span><i class="swatch" style="border-top-color:var(--bell);border-top-style:dotted;border-top-width:3px"></i> Blåklockestigen</span>
-      <span><i class="swatch" style="border-top-color:var(--sea);border-top-width:6px"></i> Brygga</span>
-    </div>
+      <div class="legend">
+        <span><i class="swatch" style="border-top-color:var(--sea);border-top-width:3.5px"></i> Lördagens rutt</span>
+        <span><i class="swatch" style="border-top-color:var(--bell);border-top-style:dotted;border-top-width:3px"></i> Blåklockestigen</span>
+        <span><i class="swatch" style="border-top-color:var(--sun-graphic);border-top-style:dotted;border-top-width:3px"></i> Avstickare Sågen</span>
+      </div>
+    </figure>
+
+    <figure class="daymap">
+      <figcaption>
+        <span class="dm-day">Söndag 9 aug</span>
+        <span class="dm-title">Västra varvet</span>
+        <span class="dm-meta">8,3 km · start och mål Alsvik</span>
+      </figcaption>
+    <svg viewBox="0 0 320 210" role="img" aria-label="Söndagens rutt: från Alsvik österut till 4-vägskorsningen, norrut mot Svartsö Norra, västerut längs sjön och söderut på Vitsippestigen tillbaka till Alsvik.">
+      <g fill="var(--sea)" opacity=".14">
+        <ellipse cx="108" cy="86" rx="21" ry="12" transform="rotate(-18 108 86)"/>
+        <ellipse cx="96" cy="118" rx="12" ry="7" transform="rotate(-10 96 118)"/>
+        <path d="M252 104c14-6 26-4 34 3 -9 8-24 11-36 6z"/>
+      </g>
+      <g fill="none" stroke="var(--line)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M158 26 L158 60"/>
+        <path d="M158 60 L104 60 L82 68"/>
+        <path d="M46 150 L286 150"/>
+        <path d="M158 150 L158 190"/>
+        <path d="M120 150 L120 196"/>
+        <path d="M158 60 L158 150"/>
+        <path d="M246 150 L246 124 L206 116"/>
+        <path d="M82 68 C64 84 60 110 54 132 L46 150" stroke-dasharray="1.5 5"/>
+        <path d="M206 116 C198 128 196 136 194 150" stroke-dasharray="1.5 5"/>
+      </g>
+      <g fill="none" stroke="var(--sea)" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M46 150 L158 150"/>
+        <path d="M158 150 L158 60"/>
+        <path d="M158 60 L104 60 L82 68"/>
+      </g>
+      <path d="M82 68 C64 84 60 110 54 132 L46 150" fill="none" stroke="var(--sun-graphic)" stroke-width="3.4" stroke-dasharray="2 5.5" stroke-linecap="round"/>
+      <g><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(110 143) rotate(0)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(165 110) rotate(-90)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(128 53) rotate(180)"/><path d="M-4 -3.4 L4.4 0 L-4 3.4 Z" fill="var(--sea)" transform="translate(56 116) rotate(100)"/></g>
+      <g>
+        <rect x="42" y="145" width="10" height="10" rx="2" fill="var(--sea)"/>
+        <circle cx="158" cy="150" r="6.5" fill="var(--paper)" stroke="var(--sea)" stroke-width="3"/>
+        <circle cx="158" cy="60" r="4.6" fill="var(--paper)" stroke="var(--sea)" stroke-width="2.6"/>
+        <circle cx="82" cy="68" r="4.2" fill="var(--sun-graphic)"/>
+      </g>
+      <g font-family="var(--f-body)" font-size="7.6" fill="var(--ink)">
+        <text x="38" y="141">Alsvik</text>
+        <text x="150" y="155" text-anchor="end">4-vägskorsningen</text>
+        <text x="166" y="63">3-vägskorsningen</text>
+        <text x="166" y="22">Svartsö Norra</text>
+        <text x="88" y="62">Fälthörnet</text>
+      </g>
+      <g font-family="var(--f-body)" font-size="6.8" font-style="italic">
+        <text x="14" y="112" fill="var(--sun)">Vitsippestigen</text>
+      </g>
+    </svg>
+      <div class="legend">
+        <span><i class="swatch" style="border-top-color:var(--sea);border-top-width:3.5px"></i> Söndagens rutt</span>
+        <span><i class="swatch" style="border-top-color:var(--sun-graphic);border-top-style:dotted;border-top-width:3px"></i> Vitsippestigen</span>
+      </div>
+    </figure>
   </div>
-  <p class="caption">Schematisk skiss — inte skalenlig. Ta med riktig karta.</p>
 
   <div class="links">
-    <a href="https://map.stockholmarchipelagotrail.com/#svartso">Interaktiv karta</a>
-    <a href="https://drive.google.com/file/d/1_yBkwuI5-VacIskUWL6wkrq7PRoVuiBB/view">GPX-fil</a>
-    <a href="https://stockholmarchipelagotrail.com/app/uploads/2024/10/en-sat-svartsoe-final.pdf">Karta att skriva ut (PDF)</a>
+    <a href="lordag.html">Lördagens steg för steg</a>
+    <a href="sondag.html">Söndagens steg för steg</a>
   </div>
 </section>
 
