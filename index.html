@@ -239,6 +239,11 @@ section{padding:2.6rem 0 .4rem;scroll-margin-top:3.4rem}
 /* ---------- packlista ---------- */
 .pack{list-style:none;display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .pack li{background:var(--surface)}
+.pack li.grp{
+  background:var(--surface-2);
+  font-family:var(--f-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);padding:.5rem .95rem;
+}
 .pack label{
   display:flex;gap:.75rem;align-items:center;
   padding:.72rem .9rem;cursor:pointer;font-size:.94rem;
@@ -620,11 +625,27 @@ footer a{color:var(--ink-soft)}
     <span class="eyebrow">Bocka av</span>
   </div>
   <ul class="pack" id="packlist">
+    <li class="grp"><span>Sova ute</span></li>
+    <li><label><input type="checkbox" data-k="p14"><span>Tält</span></label></li>
+    <li><label><input type="checkbox" data-k="p15"><span>Footprint <span class="hint">Underlagsduk till tältet</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p12"><span>Sovsäck</span></label></li>
+    <li><label><input type="checkbox" data-k="p13"><span>Liggunderlag</span></label></li>
+    <li><label><input type="checkbox" data-k="p18"><span>Sovkläder</span></label></li>
+
+    <li class="grp"><span>Mat och vatten</span></li>
+    <li><label><input type="checkbox" data-k="p16"><span>Brännare <span class="hint">Kolla eldningsförbudet innan vi åker</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p17"><span>Gas <span class="hint">Rätt fattning till brännaren</span></span></label></li>
     <li><label><input type="checkbox" data-k="p1"><span>Vattenflaska <span class="hint">Enda påfyllningen är Alsvik</span></span></label></li>
+
+    <li class="grp"><span>På kroppen</span></li>
+    <li><label><input type="checkbox" data-k="p5"><span>Inkörda skor <span class="hint">Grusväg mest, stig i två partier</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p19"><span>Strumpor <span class="hint">Fler än du tror</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p20"><span>Varm tröja <span class="hint">Det kyler på kvällen vid vattnet</span></span></label></li>
     <li><label><input type="checkbox" data-k="p2"><span>Regnjacka</span></label></li>
     <li><label><input type="checkbox" data-k="p3"><span>Badkläder och handduk <span class="hint">Lillträsk, inte Storträsk</span></span></label></li>
+
+    <li class="grp"><span>Övrigt</span></li>
     <li><label><input type="checkbox" data-k="p4"><span>Myggmedel</span></label></li>
-    <li><label><input type="checkbox" data-k="p5"><span>Inkörda skor <span class="hint">Grusväg mest, stig i två partier</span></span></label></li>
     <li><label><input type="checkbox" data-k="p6"><span>Plåster och blåsskydd</span></label></li>
     <li><label><input type="checkbox" data-k="p7"><span>Powerbank <span class="hint">Kartan äter batteri</span></span></label></li>
     <li><label><input type="checkbox" data-k="p8"><span>Pannlampa <span class="hint">Ledmärkena har reflex</span></span></label></li>
