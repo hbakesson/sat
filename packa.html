@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#e9ede6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1714" media="(prefers-color-scheme: dark)">
+<title>Packa · Hajk på Svartsö</title>
+<meta name="description" content="Packlista för tältnatt på Svartsö, grupperad och avbockningsbar.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="pagehead wrap">
+  <a class="back" href="index.html">Hajk på Svartsö</a>
+  <h1>Packa</h1>
+  <p class="ph-meta">20 saker · bockas av och sparas</p>
+</header>
+
+<nav class="navbar" aria-label="Innehåll">
+  <ul>
+    <li><a href="index.html">Start</a></li>
+    <li><a href="karta.html">Karta</a></li>
+    <li><a href="lordag.html">Lördag</a></li>
+    <li><a href="sondag.html">Söndag</a></li>
+    <li><a href="mat.html">Mat</a></li>
+    <li><a href="bat.html">Båten</a></li>
+    <li><a href="packa.html" aria-current="page">Packa</a></li>
+    <li><a href="regler.html">Regler</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section class="wrap" id="packa">
+  <ul class="pack" id="packlist">
+    <li class="grp"><span>Sova ute</span></li>
+    <li><label><input type="checkbox" data-k="p14"><span>Tält</span></label></li>
+    <li><label><input type="checkbox" data-k="p15"><span>Footprint <span class="hint">Underlagsduk till tältet</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p12"><span>Sovsäck</span></label></li>
+    <li><label><input type="checkbox" data-k="p13"><span>Liggunderlag</span></label></li>
+    <li><label><input type="checkbox" data-k="p18"><span>Sovkläder</span></label></li>
+
+    <li class="grp"><span>Mat och vatten</span></li>
+    <li><label><input type="checkbox" data-k="p16"><span>Brännare <span class="hint">Kolla eldningsförbudet innan vi åker</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p17"><span>Gas <span class="hint">Rätt fattning till brännaren</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p1"><span>Vattenflaska <span class="hint">Enda påfyllningen är Alsvik</span></span></label></li>
+
+    <li class="grp"><span>På kroppen</span></li>
+    <li><label><input type="checkbox" data-k="p5"><span>Inkörda skor <span class="hint">Grusväg mest, stig i två partier</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p19"><span>Strumpor <span class="hint">Fler än du tror</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p20"><span>Varm tröja <span class="hint">Det kyler på kvällen vid vattnet</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p2"><span>Regnjacka</span></label></li>
+    <li><label><input type="checkbox" data-k="p3"><span>Badkläder och handduk <span class="hint">Lillträsk, inte Storträsk</span></span></label></li>
+
+    <li class="grp"><span>Övrigt</span></li>
+    <li><label><input type="checkbox" data-k="p4"><span>Myggmedel</span></label></li>
+    <li><label><input type="checkbox" data-k="p6"><span>Plåster och blåsskydd</span></label></li>
+    <li><label><input type="checkbox" data-k="p7"><span>Powerbank <span class="hint">Kartan äter batteri</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p8"><span>Pannlampa <span class="hint">Ledmärkena har reflex</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p9"><span>Soppåse <span class="hint">Allt skräp åker med hem till fastlandet</span></span></label></li>
+    <li><label><input type="checkbox" data-k="p10"><span>Koppel</span></label></li>
+    <li><label><input type="checkbox" data-k="p11"><span>Utskriven karta och båttider</span></label></li>
+  </ul>
+</section>
+
+<nav class="pagenav wrap" aria-label="Sidnavigering">
+  <a class="prev" href="bat.html"><span class="dir">Föregående</span><span class="to">Båten</span></a>
+  <a class="next" href="regler.html"><span class="dir">Nästa</span><span class="to">Regler</span></a>
+</nav>
+
+</main>
+
+<footer class="wrap">
+  <p>
+    Uppgifter om leden, avstånd och vägval är hämtade från
+    <a href="https://stockholmarchipelagotrail.com/sv/section/etapp-svartso/">Stockholm Archipelago Trail — Etapp Svartsö</a>
+    och etappens steg-för-steg-beskrivning. Öppettider och båttider kan ha ändrats: kolla innan avfärd.
+    Ön har ca 65 bofasta — var en bra gäst.
+  </p>
+</footer>
+
+<script>
+(function(){
+  var boxes = document.querySelectorAll('#packlist input[type=checkbox]');
+  var KEY = 'svartso-pack-2026-08';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { state = {}; }
+
+  boxes.forEach(function(box){
+    if (state[box.dataset.k]) box.checked = true;
+    box.addEventListener('change', function(){
+      state[box.dataset.k] = box.checked;
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+    });
+  });
+})();
+</script>
+</body>
+</html>
