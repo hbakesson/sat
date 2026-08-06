@@ -489,3 +489,8 @@ footer a{color:var(--ink-soft)}
   content:counter(course);font-variant-numeric:lining-nums;
   font-size:.68rem;color:var(--ink-faint);font-weight:600;padding-top:.16rem;
 }
+
+/* Bilsträckan är inte båt — plåten är neutral, inte cyan. */
+.leg.drive{border-top-color:var(--ink-faint)}
+.leg.drive .stop.major .tick::before{background:var(--ink-faint);border-color:var(--ink-faint)}
+.leg.drive .stop.arrive .tick::before{background:var(--ink);border-color:var(--ink)}
