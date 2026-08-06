@@ -365,3 +365,34 @@ main > section:first-child{padding-top:1.5rem}
 }
 .livemap iframe{display:block;width:100%;height:100%;border:0}
 @media (min-width:600px){ .livemap{aspect-ratio:4/3} }
+
+/* ---------- båtturer ---------- */
+.boats{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:1.2rem}
+.boat{background:var(--surface);padding:.72rem .9rem;display:flex;gap:.9rem;align-items:baseline}
+.boat.pick{background:color-mix(in srgb, var(--sea) 9%, var(--surface))}
+.bt{
+  flex:none;width:3.4rem;font-family:var(--f-mono);font-size:1.02rem;
+  font-variant-numeric:tabular-nums;color:var(--ink);letter-spacing:-.02em;
+}
+.boat.pick .bt{color:var(--sea-ink);font-weight:600}
+.bd{flex:1;font-size:.85rem}
+.bd b{display:block;font-weight:600;color:var(--ink);font-size:.88rem}
+.bd span{display:block;color:var(--ink-soft);margin-top:.1rem;line-height:1.4}
+
+/* ---------- resan ---------- */
+.journey{display:flex;flex-direction:column;gap:.7rem}
+.leg{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:.85rem .95rem;box-shadow:var(--shadow)}
+.l-day{
+  display:block;font-family:var(--f-mono);font-size:.6rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--sun);margin-bottom:.5rem;
+}
+.l-row{display:flex;gap:.9rem;align-items:baseline}
+.l-time{
+  flex:none;width:3.4rem;font-family:var(--f-mono);font-size:1.1rem;
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em;color:var(--ink);
+}
+.l-place{font-family:var(--f-display);font-weight:600;font-size:1.05rem}
+.l-mid{
+  margin:.3rem 0 .3rem 4.3rem;padding-left:.9rem;border-left:2px solid var(--sea);
+  font-size:.76rem;color:var(--ink-soft);line-height:1.5;
+}
