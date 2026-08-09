@@ -602,3 +602,77 @@ footer a{color:var(--ink-soft)}
   display:block;font-weight:600;font-family:var(--font-heading);font-size:1.06rem;
   letter-spacing:-.012em;
 }
+
+/* ---------- ledkartorna ---------- */
+/* Spåren är ledens egna GPX. Plåtfärgerna bär svårighetsgraden:
+   cyan lätt, svärta medel, magenta utmanande. */
+.t{fill:none;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.t--l{stroke:var(--sea);stroke-width:1.4}
+.t--m{stroke:var(--ink);stroke-width:1.4}
+.t--s{stroke:var(--sun);stroke-width:1.4}
+.t--faint{stroke:var(--ink-faint);stroke-width:.9;opacity:.32}
+.t--on{stroke:var(--sea);stroke-width:2}
+
+.satmap{
+  background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--ink);
+  border-radius:var(--radius-sm);padding:var(--space-2);box-shadow:var(--shadow-sm);
+}
+.satmap svg,.routemap svg,.mini svg{display:block;width:100%;height:auto}
+
+.lab line{stroke:var(--ink-faint);stroke-width:.5;opacity:.6}
+.lab circle{fill:var(--paper);stroke:var(--ink);stroke-width:1}
+.lab text{
+  font-family:var(--font-body);font-size:6.4px;font-weight:600;fill:var(--ink);
+  letter-spacing:.02em;font-variant-numeric:lining-nums tabular-nums;
+}
+.mapscale line{stroke:var(--ink);stroke-width:.8}
+.mapscale text{font-family:var(--font-body);font-size:5.4px;font-weight:600;fill:var(--ink-faint);text-anchor:middle;letter-spacing:.08em}
+.mapnorth line{stroke:var(--ink);stroke-width:.8}
+.mapnorth path{fill:var(--ink)}
+.mapnorth text{font-family:var(--font-body);font-size:6px;font-weight:600;fill:var(--ink);text-anchor:middle}
+
+.maplegend{
+  list-style:none;counter-reset:none;display:grid;grid-template-columns:1fr 1fr;
+  gap:0 var(--space-3);margin-top:var(--space-3);border-top:1px solid var(--line);
+}
+.maplegend li{
+  display:grid;grid-template-columns:1.5rem 1fr auto;gap:var(--space-1);
+  align-items:baseline;padding:.26rem 0;border-bottom:1px solid var(--line-soft);font-size:.78rem;
+}
+.lg-no{font-variant-numeric:lining-nums tabular-nums;color:var(--ink-faint);font-size:.68rem;font-weight:600}
+.lg-name{font-family:var(--font-heading);font-weight:600;letter-spacing:-.01em}
+.lg-km{font-variant-numeric:lining-nums tabular-nums;color:var(--ink-faint);font-size:.7rem}
+
+.minis{display:grid;grid-template-columns:repeat(auto-fill,minmax(9.5rem,1fr));gap:var(--space-3);margin-top:var(--space-3)}
+.mini{background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--ink);border-radius:var(--radius-sm);padding:var(--space-2);box-shadow:var(--shadow-sm)}
+.mini figcaption{display:grid;grid-template-columns:1.5rem 1fr;gap:0 var(--space-1);padding-top:var(--space-1);border-top:1px solid var(--line-soft);margin-top:var(--space-1)}
+.mi-no{grid-row:1 / span 2;font-variant-numeric:lining-nums tabular-nums;color:var(--ink-faint);font-size:.68rem;font-weight:600;padding-top:.18rem}
+.mi-name{font-family:var(--font-heading);font-weight:600;font-size:1rem;letter-spacing:-.012em;line-height:1.2}
+.mi-meta{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-top:2px}
+
+.routemap{
+  background:var(--surface);border:1px solid var(--line);border-top:2px solid var(--ink);
+  border-radius:var(--radius-sm);padding:var(--space-3) var(--space-2);
+  box-shadow:var(--shadow-sm);margin-top:var(--space-4);
+}
+.rm-tag{display:block;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sun);font-weight:600}
+.rm-name{display:block;font-family:var(--font-heading);font-weight:600;font-size:1.16rem;letter-spacing:-.015em;margin-top:2px;line-height:1.25}
+.rm-meta{display:block;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;margin-top:3px}
+.routemap figcaption{padding:0 var(--space-1) var(--space-2)}
+.rdot circle{fill:var(--sea);stroke:var(--paper);stroke-width:1.4}
+.rdot text{font-family:var(--font-heading);font-size:8px;font-weight:600;fill:#fff;text-anchor:middle}
+:root[data-theme="dark"] .rdot text{fill:#12100f}
+@media (prefers-color-scheme: dark){ .rdot text{fill:#12100f} }
+.rm-days{display:flex;flex-direction:column;margin-top:var(--space-2);border-top:1px solid var(--line)}
+.rm-days > div{display:grid;grid-template-columns:3.1rem 1fr;gap:var(--space-1);padding:.3rem 0;border-bottom:1px solid var(--line-soft)}
+.rm-days dt{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);font-weight:600;padding-top:.16rem}
+.rm-days dd{font-size:.85rem;color:var(--ink-soft);line-height:1.4}
+
+/* Översikten bär inga namn — regionrutorna pekar vidare till de
+   inzoomade kartorna där namnen får plats. */
+.satmap--overview svg{max-height:none}
+.region rect{fill:none;stroke:var(--sun);stroke-width:.7;stroke-dasharray:3 2.2;opacity:.75}
+.region text{font-family:var(--font-body);font-size:6.6px;font-weight:600;fill:var(--sun);letter-spacing:.14em;text-transform:uppercase}
+.satmap figcaption{padding:0 var(--space-1) var(--space-2)}
+/* Namnen på kartan får en pappershalo så spåren inte äter dem. */
+.lab text{paint-order:stroke;stroke:var(--paper);stroke-width:2.2px;stroke-linejoin:round}
