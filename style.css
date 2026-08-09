@@ -676,3 +676,71 @@ footer a{color:var(--ink-soft)}
 .satmap figcaption{padding:0 var(--space-1) var(--space-2)}
 /* Namnen på kartan får en pappershalo så spåren inte äter dem. */
 .lab text{paint-order:stroke;stroke:var(--paper);stroke-width:2.2px;stroke-linejoin:round}
+
+/* ---------- ledbandet ---------- */
+/* Leden är en rad öar, inte en slinga. Bandet visar ordningen norr
+   till söder utan att låtsas vara en karta: nod, namn, längd som
+   stapel. Ingen tom sjö. */
+.ledband{list-style:none;position:relative;padding-left:1.6rem;margin-top:var(--space-4)}
+.ledband::before{
+  content:"";position:absolute;left:.36rem;top:.55rem;bottom:.55rem;
+  width:2px;background:var(--line);
+}
+.ledband .st{
+  position:relative;display:grid;
+  grid-template-columns:1.7rem 1fr auto;column-gap:var(--space-2);
+  align-items:baseline;padding:.42rem 0;border-bottom:1px solid var(--line-soft);
+}
+.ledband .st::before{
+  content:"";position:absolute;left:-1.42rem;top:.72rem;
+  width:9px;height:9px;border-radius:50%;
+  background:var(--paper);border:2px solid var(--ink-faint);
+}
+.st--l::before{border-color:var(--sea)}
+.st--m::before{border-color:var(--ink)}
+.st--s::before{border-color:var(--sun)}
+/* Ändpunkterna är fyllda — där börjar och slutar leden. */
+.st[data-end]::before{width:11px;height:11px;left:-1.48rem}
+.st[data-end="norr"]::before{background:var(--ink);border-color:var(--ink)}
+.st[data-end="soder"]::before{background:var(--ink);border-color:var(--ink)}
+
+.st-no{
+  font-size:.66rem;font-weight:600;color:var(--ink-faint);
+  font-variant-numeric:lining-nums tabular-nums;
+}
+.st-name{font-family:var(--font-heading);font-weight:600;font-size:1.06rem;letter-spacing:-.012em}
+.st-km{
+  font-family:var(--font-heading);font-weight:600;font-size:.94rem;
+  font-variant-numeric:lining-nums tabular-nums;white-space:nowrap;
+}
+.st-bar{
+  grid-column:2 / span 2;display:grid;grid-template-columns:42% minmax(0,1fr);
+  align-items:center;gap:var(--space-2);margin-top:3px;
+}
+/* Stapeln mäts mot en fast spalt, så etiketten alltid får plats. */
+.st-bar i{display:block;height:3px;background:var(--ink-faint)}
+.st--l .st-bar i{background:var(--sea)}
+.st--m .st-bar i{background:var(--ink)}
+.st--s .st-bar i{background:var(--sun)}
+.st-bar b{
+  font-weight:600;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);line-height:1.35;
+}
+
+.ledband .part{
+  position:relative;display:flex;align-items:baseline;justify-content:space-between;
+  gap:var(--space-2);padding:var(--space-3) 0 .3rem;border-bottom:2px solid var(--ink);
+}
+.ledband .part:first-child{padding-top:0}
+.ledband .part::before{
+  content:"";position:absolute;left:-1.48rem;top:auto;bottom:.42rem;
+  width:11px;height:2px;background:var(--ink);
+}
+.pt-name{
+  font-family:var(--font-body);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;
+  font-weight:600;color:var(--ink);
+}
+.pt-meta{
+  font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-faint);font-weight:600;font-variant-numeric:lining-nums tabular-nums;
+}
