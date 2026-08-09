@@ -228,15 +228,17 @@ p{text-wrap:pretty}
   border-top:1px solid var(--ink);
   padding-bottom:env(safe-area-inset-bottom);
 }
+/* Lika breda kolumner oavsett hur många knappar sidan har — foten är
+   fast, så en andra rad äter skärm. */
 .navbar ul{
-  display:grid;grid-template-columns:repeat(5,1fr);
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);
   gap:4px;list-style:none;padding:var(--space-2);
 }
 .navbar a{
   display:flex;align-items:center;justify-content:center;
   min-height:46px;white-space:nowrap;text-decoration:none;
   font-family:var(--font-heading);font-weight:600;
-  font-size:clamp(.85rem,3.9vw,1.15rem);letter-spacing:-.005em;
+  font-size:clamp(.78rem,3.9vw,1.15rem);letter-spacing:-.005em;
   color:var(--ink);background:var(--surface);
   border:1px solid var(--ink);border-radius:var(--radius-sm);
   padding:.35rem .2rem;
@@ -264,7 +266,7 @@ p{text-wrap:pretty}
 section{padding:var(--space-8) 0 var(--space-1);scroll-margin-top:var(--space-4)}
 main > section:first-child{padding-top:var(--space-6)}
 .head{
-  display:flex;align-items:baseline;justify-content:space-between;gap:var(--space-4);
+  display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:var(--space-4);
   margin-bottom:var(--space-4);padding-bottom:var(--space-2);border-bottom:2px solid var(--ink);
 }
 .head .eyebrow{flex:none}
