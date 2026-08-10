@@ -744,3 +744,13 @@ footer a{color:var(--ink-soft)}
   font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;
   color:var(--ink-faint);font-weight:600;font-variant-numeric:lining-nums tabular-nums;
 }
+
+/* Båtraden på etappkortet — trafikens karaktär, inte tidtabell. */
+.et__bat{
+  display:flex;flex-wrap:wrap;align-items:baseline;gap:var(--space-1) var(--space-2);
+  font-size:.78rem;color:var(--ink-soft);margin:var(--space-2) 0 0 2.1rem;
+}
+.bt-k{
+  flex:none;font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);font-weight:600;
+}

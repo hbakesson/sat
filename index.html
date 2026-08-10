@@ -56,6 +56,13 @@
       <button type="button" class="chip" data-v="mellan">10–15 km</button>
       <button type="button" class="chip" data-v="lang">Över 15 km</button>
     </div>
+    <div class="filterrow" data-filter="bat">
+      <span class="f-lbl">Båt</span>
+      <button type="button" class="chip is-on" data-v="alla">Alla</button>
+      <button type="button" class="chip" data-v="dagstur">Dagstur</button>
+      <button type="button" class="chip" data-v="aret">Året om</button>
+      <button type="button" class="chip" data-v="nordsyd">Nordsydlinjen</button>
+    </div>
     <div class="filterrow" data-filter="status">
       <span class="f-lbl">Urval</span>
       <button type="button" class="chip is-on" data-v="alla">Alla</button>
@@ -72,7 +79,7 @@
   <p class="count" id="count"></p>
 
   <div class="chooser" id="chooser">
-    <article class="et" id="arholma" data-slug="arholma" data-diff="medel" data-km="13.4" data-order="1">
+    <article class="et" id="arholma" data-slug="arholma" data-diff="medel" data-km="13.4" data-order="1" data-bat="aret" data-dag="ja" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">01</span>
         <div class="et__id">
@@ -82,6 +89,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">13,4 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">57 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Simpnäs · året om · Nordsydlinjen i sommar</p>
       <p class="et__fac">Utedass finns vid Campingplatsen och vid Österhamns gästhamn. Ej vintertid · Vatten finns vid gästhamnen. Ej vintertid</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="arholma" aria-pressed="false">Kortlista</button>
@@ -140,7 +148,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="lido" data-slug="lido" data-diff="medel" data-km="11.9" data-order="2">
+    <article class="et" id="lido" data-slug="lido" data-diff="medel" data-km="11.9" data-order="2" data-bat="aret" data-dag="ja" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">02</span>
         <div class="et__id">
@@ -150,6 +158,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">11,9 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">21 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Räfsnäs Brygga · året om · Nordsydlinjen i sommar</p>
       <p class="et__fac">Utedass finns vid gästhamnen. Ej vintertid · Vatten finns vid gästhamnen. Ej vintertid</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="lido" aria-pressed="false">Kortlista</button>
@@ -213,7 +222,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="yxlan" data-slug="yxlan" data-diff="medel" data-km="24.0" data-order="3">
+    <article class="et" id="yxlan" data-slug="yxlan" data-diff="medel" data-km="24.0" data-order="3" data-bat="aret" data-dag="nej" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">03</span>
         <div class="et__id">
@@ -223,6 +232,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">24 km</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Norrtälje · året om · Nordsydlinjen i sommar</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="yxlan" aria-pressed="false">Kortlista</button>
         <button type="button" class="pick js-done" data-k="yxlan" aria-pressed="false">Gången</button>
@@ -268,7 +278,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="furusund" data-slug="furusund" data-diff="medel" data-km="7.2" data-order="4">
+    <article class="et" id="furusund" data-slug="furusund" data-diff="medel" data-km="7.2" data-order="4" data-bat="aret" data-dag="nej" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">04</span>
         <div class="et__id">
@@ -278,6 +288,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">7,2 km</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Norrtälje · året om · Nordsydlinjen i sommar</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="furusund" aria-pressed="false">Kortlista</button>
         <button type="button" class="pick js-done" data-k="furusund" aria-pressed="false">Gången</button>
@@ -330,7 +341,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="moja" data-slug="moja" data-diff="latt" data-km="13.8" data-order="5">
+    <article class="et" id="moja" data-slug="moja" data-diff="latt" data-km="13.8" data-order="5" data-bat="oklart" data-dag="nej" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">05</span>
         <div class="et__id">
@@ -340,6 +351,7 @@
         <span class="badge badge--latt">Lätt</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">13,8 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4:30 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">85 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Stockholm City · säsong ej angiven · Nordsydlinjen i sommar</p>
       <p class="et__fac">Öppen toalett finns vid gästhamnen i Berg. Ej vintertid · Vatten finns vid gästhamnen i Berg. Ej vintertid</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="moja" aria-pressed="false">Kortlista</button>
@@ -405,7 +417,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="finnhamn" data-slug="finnhamn" data-diff="medel" data-km="10.1" data-order="6">
+    <article class="et" id="finnhamn" data-slug="finnhamn" data-diff="medel" data-km="10.1" data-order="6" data-bat="aret" data-dag="ja" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">06</span>
         <div class="et__id">
@@ -415,6 +427,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">10,1 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">3:45 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">42 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Åsättra · året om · Nordsydlinjen i sommar</p>
       <p class="et__fac">Öppen toalett finns vid Paradisviken och vid övriga dass · Vatten finns vid Stugbyn och i alla handpumpar</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="finnhamn" aria-pressed="false">Kortlista</button>
@@ -486,7 +499,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="ingmarso" data-slug="ingmarso" data-diff="medel" data-km="9.8" data-order="7">
+    <article class="et" id="ingmarso" data-slug="ingmarso" data-diff="medel" data-km="9.8" data-order="7" data-bat="aret" data-dag="ja">
       <div class="et__hd">
         <span class="et__no">07</span>
         <div class="et__id">
@@ -496,6 +509,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">9,8 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">3,5 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">75 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Stockholm City · året om</p>
       <p class="et__fac">Öppen toalett finns vid gästhamnen. Ej vintertid · Vatten finns vid gästhamnen. Ej vintertid</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="ingmarso" aria-pressed="false">Kortlista</button>
@@ -562,7 +576,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="brotto" data-slug="brotto" data-diff="latt" data-km="1.0" data-order="8">
+    <article class="et" id="brotto" data-slug="brotto" data-diff="latt" data-km="1.0" data-order="8" data-bat="aret" data-dag="ja">
       <div class="et__hd">
         <span class="et__no">08</span>
         <div class="et__id">
@@ -572,6 +586,7 @@
         <span class="badge badge--latt">Lätt</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">1 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">20 min</span></li><li><span class="f-k">Stigning</span><span class="f-v">15 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Åsättra · året om</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="brotto" aria-pressed="false">Kortlista</button>
         <button type="button" class="pick js-done" data-k="brotto" aria-pressed="false">Gången</button>
@@ -633,7 +648,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="svartso" data-slug="svartso" data-diff="latt" data-km="17.9" data-order="9">
+    <article class="et" id="svartso" data-slug="svartso" data-diff="latt" data-km="17.9" data-order="9" data-bat="aret" data-dag="ja">
       <div class="et__hd">
         <span class="et__no">09</span>
         <div class="et__id">
@@ -643,6 +658,7 @@
         <span class="badge badge--latt">Lätt</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">17,9 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4,5 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">79 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Stockholm City · året om</p>
       <p class="et__fac">Öppen toalett finns vid gästhamnen i Alsvik. Ej vintertid · Vatten finns vid gästhamnen i Alsvik. Ej vintertid</p>
       <p class="et__plan"><a href="resplaner.html">Vi har en färdig resplan för Svartsö</a> — karta, båttider och två dagsetapper.</p>
       <div class="et__acts">
@@ -710,7 +726,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="grinda" data-slug="grinda" data-diff="medel" data-km="9.8" data-order="10">
+    <article class="et" id="grinda" data-slug="grinda" data-diff="medel" data-km="9.8" data-order="10" data-bat="aret" data-dag="ja">
       <div class="et__hd">
         <span class="et__no">10</span>
         <div class="et__id">
@@ -720,6 +736,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">9,8 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">3:30 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">55 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Vaxholm · året om</p>
       <p class="et__fac">Öppen toalett finns vid gästhamnen och vid Sea lodge. Ej vintertid · Vatten finns vid gästhamnen och vid Sea lodge. Ej vintertid</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="grinda" aria-pressed="false">Kortlista</button>
@@ -775,7 +792,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="sandhamn" data-slug="sandhamn" data-diff="latt" data-km="8.1" data-order="11">
+    <article class="et" id="sandhamn" data-slug="sandhamn" data-diff="latt" data-km="8.1" data-order="11" data-bat="aret" data-dag="ja" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">11</span>
         <div class="et__id">
@@ -785,6 +802,7 @@
         <span class="badge badge--latt">Lätt</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">8,1 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">2,5 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">35 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Stavsnäs · året om · Nordsydlinjen i sommar</p>
       <p class="et__fac">Toaletter och vatten finns i hamnen ca 100 meter öster om ångbåtsbryggan. Dessa har öppet mellean 08-20</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="sandhamn" aria-pressed="false">Kortlista</button>
@@ -849,7 +867,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="runmaro" data-slug="runmaro" data-diff="medel" data-km="18.5" data-order="12">
+    <article class="et" id="runmaro" data-slug="runmaro" data-diff="medel" data-km="18.5" data-order="12" data-bat="aret" data-dag="nej">
       <div class="et__hd">
         <span class="et__no">12</span>
         <div class="et__id">
@@ -859,6 +877,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">18,5 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">6 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">85 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Stavsnäs · året om</p>
       <p class="et__fac">Utedass finns vid grusvägen 100 meter öster om avtagsvägen till Runmarö Båtvarv med kod 2025</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="runmaro" aria-pressed="false">Kortlista</button>
@@ -919,7 +938,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="namdo" data-slug="namdo" data-diff="medel" data-km="13.1" data-order="13">
+    <article class="et" id="namdo" data-slug="namdo" data-diff="medel" data-km="13.1" data-order="13" data-bat="aret" data-dag="ja" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">13</span>
         <div class="et__id">
@@ -929,6 +948,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">13,1 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4:30 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">40 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Stavsnäs · året om · Nordsydlinjen i sommar</p>
       <p class="et__fac">Öppen toalett finns vid museet i Sand. Ej vintertid · Vatten finns vid museet i Sand. Ej vintertid</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="namdo" aria-pressed="false">Kortlista</button>
@@ -989,7 +1009,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="orno" data-slug="orno" data-diff="medel" data-km="34.1" data-order="14">
+    <article class="et" id="orno" data-slug="orno" data-diff="medel" data-km="34.1" data-order="14" data-bat="aret" data-dag="nej" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">14</span>
         <div class="et__id">
@@ -999,6 +1019,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">34,1 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">11 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">197 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Dalarö · året om · Nordsydlinjen i sommar</p>
       <p class="et__fac">Vatten och toalett finns vid muséet och hembygdsgården</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="orno" aria-pressed="false">Kortlista</button>
@@ -1068,7 +1089,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="fjardlang" data-slug="fjardlang" data-diff="medel" data-km="11.7" data-order="15">
+    <article class="et" id="fjardlang" data-slug="fjardlang" data-diff="medel" data-km="11.7" data-order="15" data-bat="sasong" data-dag="nej" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">15</span>
         <div class="et__id">
@@ -1078,6 +1099,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">11,7 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">3,5 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">79 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Utö · säsongstrafik · Nordsydlinjen i sommar</p>
       <p class="et__fac">Utedass finns vid Vedviken samt vid Mörkvikens sydöstra strand · Inget vatten under 2026</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="fjardlang" aria-pressed="false">Kortlista</button>
@@ -1128,7 +1150,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="uto" data-slug="uto" data-diff="svar" data-km="18.4" data-order="16">
+    <article class="et" id="uto" data-slug="uto" data-diff="svar" data-km="18.4" data-order="16" data-bat="aret" data-dag="nej" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">16</span>
         <div class="et__id">
@@ -1138,6 +1160,7 @@
         <span class="badge badge--svar">Utmanande</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">18,4 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">6 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">85 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Årsta Brygga · året om · Nordsydlinjen i sommar</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="uto" aria-pressed="false">Kortlista</button>
         <button type="button" class="pick js-done" data-k="uto" aria-pressed="false">Gången</button>
@@ -1194,7 +1217,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="alo" data-slug="alo" data-diff="svar" data-km="13.2" data-order="17">
+    <article class="et" id="alo" data-slug="alo" data-diff="svar" data-km="13.2" data-order="17" data-bat="oklart" data-dag="nej">
       <div class="et__hd">
         <span class="et__no">17</span>
         <div class="et__id">
@@ -1204,6 +1227,7 @@
         <span class="badge badge--svar">Utmanande</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">13,2 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4,5 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">95 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Nynäshamn · säsong ej angiven</p>
       <p class="et__fac">Vatten &amp; öppen toalett finns vid korsningen 100 meter från Ångbåtsbryggan och vid Ålö Storsand</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="alo" aria-pressed="false">Kortlista</button>
@@ -1254,7 +1278,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="rano" data-slug="rano" data-diff="latt" data-km="12.0" data-order="18">
+    <article class="et" id="rano" data-slug="rano" data-diff="latt" data-km="12.0" data-order="18" data-bat="aret" data-dag="ja">
       <div class="et__hd">
         <span class="et__no">18</span>
         <div class="et__id">
@@ -1264,6 +1288,7 @@
         <span class="badge badge--latt">Lätt</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">12 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4,5 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">65 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Nynäshamn · året om</p>
       <p class="et__fac">Vatten finns vid affären, vid campingen och vid Rånö hamn</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="rano" aria-pressed="false">Kortlista</button>
@@ -1320,7 +1345,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="nattaro" data-slug="nattaro" data-diff="svar" data-km="9.5" data-order="19">
+    <article class="et" id="nattaro" data-slug="nattaro" data-diff="svar" data-km="9.5" data-order="19" data-bat="oklart" data-dag="nej" data-nordsyd="ja">
       <div class="et__hd">
         <span class="et__no">19</span>
         <div class="et__id">
@@ -1330,6 +1355,7 @@
         <span class="badge badge--svar">Utmanande</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">9,5 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">4,5 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">55 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Nynäshamn · säsong ej angiven · Nordsydlinjen i sommar</p>
       <p class="et__fac">Vatten och dass finns i anslutning till Ångbåtsbryggan, Storsand och Östermarviken</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="nattaro" aria-pressed="false">Kortlista</button>
@@ -1388,7 +1414,7 @@
         </div>
       </details>
     </article>
-    <article class="et" id="landsort" data-slug="landsort" data-diff="medel" data-km="10.7" data-order="20">
+    <article class="et" id="landsort" data-slug="landsort" data-diff="medel" data-km="10.7" data-order="20" data-bat="aret" data-dag="ja">
       <div class="et__hd">
         <span class="et__no">20</span>
         <div class="et__id">
@@ -1398,6 +1424,7 @@
         <span class="badge badge--medel">Medel</span>
       </div>
       <ul class="et__facts"><li><span class="f-k">Längd</span><span class="f-v">10,7 km</span></li><li><span class="f-k">Gångtid</span><span class="f-v">3:45 timmar</span></li><li><span class="f-k">Stigning</span><span class="f-v">55 m</span></li></ul>
+      <p class="et__bat"><span class="bt-k">Båt</span>Från Ankarudden · året om</p>
       <p class="et__fac">Öppen toalett finns vid norra &amp; västra hamnen · Vatten finns vid norra &amp; västra hamnen</p>
       <div class="et__acts">
         <button type="button" class="pick js-pick" data-k="landsort" aria-pressed="false">Kortlista</button>
@@ -1458,7 +1485,7 @@
       </details>
     </article>
   </div>
-  <p class="caption">Längd, svårighet, gångtid, stigning och uppgifter om vatten och toalett kommer från etappsidorna och steg-för-steg-beskrivningarna på stockholmarchipelagotrail.com. Etapp Yxlan och Etapp Furusund saknar steg-för-steg-beskrivning, därför saknas gångtid och stigning där.</p>
+  <p class="caption"><b>Dagstur</b> betyder högst 4,5 timmars gångtid och båt året om enligt etappsidan — alltså rimligt att hinna ut, gå och tillbaka samma dag. Det är en gallring, inte ett besked: Waxholmsbolaget byter tidtabell fyra gånger om året och publicerar inga maskinläsbara tider, så avgångarna måste kollas i <a href="https://map.stockholmarchipelagotrail.com">reseplaneraren</a> innan man bestämmer sig. Yxlan och Furusund saknar steg-för-steg-beskrivning och därmed gångtid, så de faller utanför gallringen även om de trafikeras året om. För Möja, Ålö och Nåttarö säger etappsidan inget om vintertrafik — de står som säsong ej angiven, vilket inte är samma sak som att trafiken saknas.</p>
 </section>
 
 <section class="wrap" id="kartor">
@@ -1564,7 +1591,7 @@
 
   var chooser = document.getElementById('chooser');
   var cards = Array.prototype.slice.call(chooser.querySelectorAll('.et'));
-  var f = { diff:'alla', km:'alla', status:'alla', sort:'led' };
+  var f = { diff:'alla', km:'alla', bat:'alla', status:'alla', sort:'led' };
 
   function flags(slug){ return state[slug] || {}; }
 
@@ -1583,6 +1610,9 @@
     if (f.km === 'kort' && !(km < 10)) return false;
     if (f.km === 'mellan' && !(km >= 10 && km <= 15)) return false;
     if (f.km === 'lang' && !(km > 15)) return false;
+    if (f.bat === 'dagstur' && card.dataset.dag !== 'ja') return false;
+    if (f.bat === 'aret' && card.dataset.bat !== 'aret') return false;
+    if (f.bat === 'nordsyd' && card.dataset.nordsyd !== 'ja') return false;
     if (f.status === 'kvar' && s.done) return false;
     if (f.status === 'kort' && !s.pick) return false;
     return true;
